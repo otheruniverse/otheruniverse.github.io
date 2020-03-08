@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://gitome.gitee.io/"/>
-  <updated>2020-03-06T15:04:13.377Z</updated>
+  <updated>2020-03-07T18:16:09.000Z</updated>
   <id>https://gitome.gitee.io/</id>
   
   <author>
@@ -17,24 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://gitome.gitee.io/2020/03/06/hello-world/"/>
-    <id>https://gitome.gitee.io/2020/03/06/hello-world/</id>
-    <published>2020-03-06T15:04:13.377Z</published>
-    <updated>2020-03-06T15:04:13.377Z</updated>
+    <title>影子</title>
+    <link href="https://gitome.gitee.io/2020/03/08/%E5%BD%B1%E5%AD%90/"/>
+    <id>https://gitome.gitee.io/2020/03/08/%E5%BD%B1%E5%AD%90/</id>
+    <published>2020-03-07T18:16:09.000Z</published>
+    <updated>2020-03-07T18:16:09.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>你陪我长大,我陪你到老。</p><a id="more"></a><p>下雨的天,有点冷,一个人窝在被窝里,看速度与激情里。不知从什么时候开始喜欢保罗，沉迷于他的车技跟独特的魅力,幻想着我能与他一样,在急速的时间里变得无畏,对一刹那静止的沉醉。可我还差的很多,起码,得有一辆GTR吧。</p><p>等以后有钱了,就不再工作,去做想做的事,开一辆最快的车,行驶在世界的任何角落。</p><p>冲刺极限的速度,想想就让人兴奋,快,到达极致的快! 世俗追不上我,死神也追不上我,没有人能追的上我。</p><p>听最喜欢的歌,开最快的车,在世间自由的活着。命运,势力,平凡,一切都无法束缚,在人间,做一个最自由的精灵。</p><p>然而,那一天，我不知道还要等多久…</p><p>总是感觉身后有个人,大概是我的影子,从小到大,一直在我身边。假如我不是人格分裂的话,常常能听到不一样的声音。比如,有时候我会忘记我想要什么,忙碌的生活着是为了什么,若是这样想,所有的人都会崩溃吧,努力的活着,到最后却还是会死,没有人记得你的一切,都会从这个世界上消失,更可悲的是,喜欢的,在乎的,先于你离开,尽管补偿的可能是更多的钱,更大的房子,更舒服的生活,可是,谁会在乎这些啊。</p><p>每当我这样想,就会有不一样的声音想起,以后的几十年,会有点点滴滴的快乐,像是繁星,一颗一颗繁星,组成浩瀚的苍穹,多么普通,多么伟大。</p><p>如果能这样想的话,即使明天是末日,也没有什么了… 不过新的一天比末日更让人期待吧,我本一无所有,却终将拥抱满天自由。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
+      &lt;p&gt;你陪我长大,我陪你到老。&lt;/p&gt;
     
     </summary>
     
     
+    
+      <category term="心情" scheme="https://gitome.gitee.io/tags/%E5%BF%83%E6%83%85/"/>
+    
+      <category term="随笔" scheme="https://gitome.gitee.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>十月随笔</title>
+    <link href="https://gitome.gitee.io/2020/03/08/%E5%8D%81%E6%9C%88%E9%9A%8F%E7%AC%94/"/>
+    <id>https://gitome.gitee.io/2020/03/08/%E5%8D%81%E6%9C%88%E9%9A%8F%E7%AC%94/</id>
+    <published>2020-03-07T18:15:52.000Z</published>
+    <updated>2020-03-07T18:15:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>可能是因为天气越来越冷，我才感到身体渐渐温暖。想起小时候家里养过一只猫，肥肥的，摸上去很柔软的。每天晚上睡觉的时候，都被它的小主子抱在怀里，暖暖的，感觉特别舒服。<a id="more"></a>只要一看到它就会逗它玩，路上看见了喊一声，它就会缓缓的跑过来，钻到我怀里。现在才知道，它对我而言，不是一只宠物，而是儿时的陪伴，一种亲切而又渐渐忘记的感觉。</p><p>不知道是不是因为太忙，有很多事情忘记去做。八月初，远在天水的姐姐结婚，我和哥哥都去参加她的婚礼。那是一个令人难忘的日子，在以后的人生中回想起来，一定是无限怀恋。结婚前的一晚在湖边，一片皎洁的月光，我静静的享受着那一片宁静，思考着我们这些“孩子”的未来，就像安迪在监狱的楼顶那样，阳光洒肩头，仿若自由人。希望他们永远幸福，如果我也可以得到幸福…</p><p>也许下雨和阴冷的天气很适合回想，我想起那年冬天，我穿着同学的衣服去上厕所，回来一身的臭味，他一脸的嫌弃，我放肆的傻笑。我万万也不会想到，曾今认为无所谓的高中岁月，竟会让我这般怀念与遗憾，多少有意思的人，匆匆错过，不再联系。</p><p>等到毕业以后我要找小小的房子，宁静却不偏僻，养一只纯灰色的肥肥的小猫，再组装一台电脑，一些简单的家居，开始我的另一段生活。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;可能是因为天气越来越冷，我才感到身体渐渐温暖。想起小时候家里养过一只猫，肥肥的，摸上去很柔软的。每天晚上睡觉的时候，都被它的小主子抱在怀里，暖暖的，感觉特别舒服。
+    
+    </summary>
+    
+    
+    
+      <category term="随笔" scheme="https://gitome.gitee.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>写作日常</title>
+    <link href="https://gitome.gitee.io/2020/03/06/%E5%86%99%E4%BD%9C%E6%97%A5%E5%B8%B8/"/>
+    <id>https://gitome.gitee.io/2020/03/06/%E5%86%99%E4%BD%9C%E6%97%A5%E5%B8%B8/</id>
+    <published>2020-03-05T16:00:09.000Z</published>
+    <updated>2020-03-05T16:00:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>！这是我的第一篇文章。查看<a href="https://hexo.io/docs/" target="_blank" rel="noopener">文档</a>以获取更多信息。如果在使用Hexo时遇到任何问题，可以在<a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">故障排除</a>中找到答案，也可以在<a href="https://github.com/otheruniverse/" target="_blank" rel="noopener">GitHub</a>上问我。</p><a id="more"></a><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建一篇文章"><a href="#创建一篇文章" class="headerlink" title="创建一篇文章"></a>创建一篇文章</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"new_post_name"</span></span><br></pre></td></tr></table></figure></div><p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">写作</a></p><h3 id="运行服务器"><a href="#运行服务器" class="headerlink" title="运行服务器"></a>运行服务器</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div><p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">服务器</a></p><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div><p>or</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure></div><p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">生成</a></p><h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div><p>or</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></div><p>更多信息: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">部署</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;欢迎来到&lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;！这是我的第一篇文章。查看&lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;文档&lt;/a&gt;以获取更多信息。如果在使用Hexo时遇到任何问题，可以在&lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;故障排除&lt;/a&gt;中找到答案，也可以在&lt;a href=&quot;https://github.com/otheruniverse/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;上问我。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="技巧" scheme="https://gitome.gitee.io/tags/%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
