@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://theboy.top/"/>
-  <updated>2020-03-07T18:16:09.000Z</updated>
+  <updated>2025-09-30T18:15:52.000Z</updated>
   <id>https://theboy.top/</id>
   
   <author>
@@ -15,6 +15,71 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>十月随笔</title>
+    <link href="https://theboy.top/2025/10/01/%E5%8D%81%E6%9C%88%E9%9A%8F%E7%AC%94/"/>
+    <id>https://theboy.top/2025/10/01/%E5%8D%81%E6%9C%88%E9%9A%8F%E7%AC%94/</id>
+    <published>2025-09-30T18:15:52.000Z</published>
+    <updated>2025-09-30T18:15:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>可能是因为天气越来越冷，我才感到身体渐渐温暖。想起小时候家里养过一只猫，肥肥的，摸上去很柔软的。每天晚上睡觉的时候，都被它的小主子抱在怀里，暖暖的，感觉特别舒服。<a id="more"></a>只要一看到它就会逗它玩，路上看见了喊一声，它就会缓缓的跑过来，钻到我怀里。现在才知道，它对我而言，不是一只宠物，而是儿时的陪伴，一种亲切而又渐渐忘记的感觉。</p><p>不知道是不是因为太忙，有很多事情忘记去做。八月初，远在天水的姐姐结婚，我和哥哥都去参加她的婚礼。那是一个令人难忘的日子，在以后的人生中回想起来，一定是无限怀恋。结婚前的一晚在湖边，一片皎洁的月光，我静静的享受着那一片宁静，思考着我们这些“孩子”的未来，就像安迪在监狱的楼顶那样，阳光洒肩头，仿若自由人。希望他们永远幸福，如果我也可以得到幸福…</p><p>也许下雨和阴冷的天气很适合回想，我想起那年冬天，我穿着同学的衣服去上厕所，回来一身的臭味，他一脸的嫌弃，我放肆的傻笑。我万万也不会想到，曾今认为无所谓的高中岁月，竟会让我这般怀念与遗憾，多少有意思的人，匆匆错过，不再联系。</p><p>等到毕业以后我要找小小的房子，宁静却不偏僻，养一只纯灰色的肥肥的小猫，再组装一台电脑，一些简单的家居，开始我的另一段生活。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;可能是因为天气越来越冷，我才感到身体渐渐温暖。想起小时候家里养过一只猫，肥肥的，摸上去很柔软的。每天晚上睡觉的时候，都被它的小主子抱在怀里，暖暖的，感觉特别舒服。
+    
+    </summary>
+    
+    
+    
+      <category term="随笔" scheme="https://theboy.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu更换阿里源</title>
+    <link href="https://theboy.top/2020/03/09/ubuntu%E6%9B%B4%E6%8D%A2%E9%98%BF%E9%87%8C%E6%BA%90/"/>
+    <id>https://theboy.top/2020/03/09/ubuntu%E6%9B%B4%E6%8D%A2%E9%98%BF%E9%87%8C%E6%BA%90/</id>
+    <published>2020-03-08T18:29:08.000Z</published>
+    <updated>2020-03-08T18:29:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>安装Ubuntu系统后首先要做的就是更换国内源，亲测北方地区阿里源速度更快。</p><a id="more"></a><p>需要改变的是 /etc/apt/sources.list 文件。</p><p>1.备份原文件</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo cp /etc/apt/sources.list /etc/apt/sources.list.old</span><br></pre></td></tr></table></figure></div><p>2.复制下面的内容到 sources.list 文件</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gedit /etc/apt/sources.list</span><br></pre></td></tr></table></figure></div><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure></div><p>3.更新二连</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;安装Ubuntu系统后首先要做的就是更换国内源，亲测北方地区阿里源速度更快。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="ubuntu" scheme="https://theboy.top/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu完全卸载软件的方法</title>
+    <link href="https://theboy.top/2020/03/09/ubuntu%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>https://theboy.top/2020/03/09/ubuntu%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/</id>
+    <published>2020-03-08T17:55:59.000Z</published>
+    <updated>2020-03-08T17:55:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文将告诉你在Ubuntu系统中怎样彻底的卸载常用软件。</p><a id="more"></a><p>这里以 nginx 为例，卸载其他软件只需要把 nginx 替换为其他软件名就可以了。</p><p>1.删除nginx，–purge包括配置文件</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove --purge nginx</span><br></pre></td></tr></table></figure></div><p>2.移除孤立的软件包</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove</span><br></pre></td></tr></table></figure></div><p>3.罗列出所有 nginx 的相关软件</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg --selections|grep nginx</span><br></pre></td></tr></table></figure></div><p>4.删除这些软件</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove --purge nginx nginx-common nginx-core</span><br></pre></td></tr></table></figure></div><p>5.全局查找nginx相关的文件(重点!)</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo find / -name nginx*</span><br></pre></td></tr></table></figure></div><p>6.删除这些文件</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo rm -rf file_name</span><br></pre></td></tr></table></figure></div><p>file_name替换为5.中具体的文件夹</p><p>7.清理三连</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoclean</span><br></pre></td></tr></table></figure></div><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove</span><br></pre></td></tr></table></figure></div><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt purge</span><br></pre></td></tr></table></figure></div><p>8.更新二连</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div><p>至此，nginx就完整的从你的系统中消失了，需要注意的是，6.请谨慎操作，否则可能导致无法正常运行！！！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文将告诉你在Ubuntu系统中怎样彻底的卸载常用软件。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="ubuntu" scheme="https://theboy.top/tags/ubuntu/"/>
+    
+      <category term="技巧" scheme="https://theboy.top/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>影子</title>
@@ -36,27 +101,6 @@
       <category term="随笔" scheme="https://theboy.top/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="心情" scheme="https://theboy.top/tags/%E5%BF%83%E6%83%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>十月随笔</title>
-    <link href="https://theboy.top/2020/03/08/%E5%8D%81%E6%9C%88%E9%9A%8F%E7%AC%94/"/>
-    <id>https://theboy.top/2020/03/08/%E5%8D%81%E6%9C%88%E9%9A%8F%E7%AC%94/</id>
-    <published>2020-03-07T18:15:52.000Z</published>
-    <updated>2020-03-07T18:15:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>可能是因为天气越来越冷，我才感到身体渐渐温暖。想起小时候家里养过一只猫，肥肥的，摸上去很柔软的。每天晚上睡觉的时候，都被它的小主子抱在怀里，暖暖的，感觉特别舒服。<a id="more"></a>只要一看到它就会逗它玩，路上看见了喊一声，它就会缓缓的跑过来，钻到我怀里。现在才知道，它对我而言，不是一只宠物，而是儿时的陪伴，一种亲切而又渐渐忘记的感觉。</p><p>不知道是不是因为太忙，有很多事情忘记去做。八月初，远在天水的姐姐结婚，我和哥哥都去参加她的婚礼。那是一个令人难忘的日子，在以后的人生中回想起来，一定是无限怀恋。结婚前的一晚在湖边，一片皎洁的月光，我静静的享受着那一片宁静，思考着我们这些“孩子”的未来，就像安迪在监狱的楼顶那样，阳光洒肩头，仿若自由人。希望他们永远幸福，如果我也可以得到幸福…</p><p>也许下雨和阴冷的天气很适合回想，我想起那年冬天，我穿着同学的衣服去上厕所，回来一身的臭味，他一脸的嫌弃，我放肆的傻笑。我万万也不会想到，曾今认为无所谓的高中岁月，竟会让我这般怀念与遗憾，多少有意思的人，匆匆错过，不再联系。</p><p>等到毕业以后我要找小小的房子，宁静却不偏僻，养一只纯灰色的肥肥的小猫，再组装一台电脑，一些简单的家居，开始我的另一段生活。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;可能是因为天气越来越冷，我才感到身体渐渐温暖。想起小时候家里养过一只猫，肥肥的，摸上去很柔软的。每天晚上睡觉的时候，都被它的小主子抱在怀里，暖暖的，感觉特别舒服。
-    
-    </summary>
-    
-    
-    
-      <category term="随笔" scheme="https://theboy.top/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
