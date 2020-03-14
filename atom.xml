@@ -38,6 +38,29 @@
   </entry>
   
   <entry>
+    <title>烟雾报警传感器实验</title>
+    <link href="https://theboy.top/2020/03/14/%E7%83%9F%E9%9B%BE%E6%8A%A5%E8%AD%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C/"/>
+    <id>https://theboy.top/2020/03/14/%E7%83%9F%E9%9B%BE%E6%8A%A5%E8%AD%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C/</id>
+    <published>2020-03-14T07:46:08.000Z</published>
+    <updated>2020-03-14T07:46:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>基于MQ-2的烟雾报警传感器的实验<a id="more"></a></p><p>参考链接：<br>    1.<a href="https://blog.51cto.com/13479737/2087546" target="_blank" rel="noopener">基于树莓派（Raspberry Pi）平台的MQ-2烟雾报警系统</a><br>实验步骤：<br>    首先开始连线，传感器上有四个金属接头，试验中会用到三个，分别是：VCC , GND ,DO 。其中，VCC 接５Ｖ电源，四号位，GND接地，六号位，DO 接任意GPIO口，七号位。<br>程序代码：</p><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#! /usr/bin/env python3</span></span><br><span class="line"><span class="keyword">import</span> RPi.GPIO <span class="keyword">as</span> GPIO       <span class="comment">#导入库，并进行别名的设置</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">CHANNEL=<span class="number">7</span>           <span class="comment"># 确定引脚口。按照真实的位置确定</span></span><br><span class="line">GPIO.setmode(GPIO.BOARD) <span class="comment"># 选择引脚系统，这里我们选择了BOARD</span></span><br><span class="line">GPIO.setup(CHANNEL,GPIO.IN,pull_up_down=GPIO.PUD_DOWN)</span><br><span class="line"><span class="comment">#初始化引脚，将7号引脚设置为输入下拉电阻，因为在初始化的时候不确定的的引电平，因此这样设置是用来保证精准，（但是也可以不写“pull_up_down=GPIO.PUD_DOWN”）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 带有异常处理的主程序</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">              <span class="keyword">while</span> <span class="literal">True</span>: <span class="comment"># 执行一个while死循环</span></span><br><span class="line">  status=GPIO.input(CHANNEL) <span class="comment"># 检测36号引脚口的输入高低电平状态</span></span><br><span class="line">  <span class="comment">#print(status) # 实时打印此时的电平状态</span></span><br><span class="line">  <span class="keyword">if</span> status == <span class="literal">True</span>: <span class="comment"># 如果为高电平，说明MQ-2正常，并打印“OK”</span></span><br><span class="line">            <span class="keyword">print</span> ( <span class="string">' 正常 '</span> )</span><br><span class="line">   <span class="keyword">else</span>:    <span class="comment"># 如果为低电平，说明MQ-2检测到有害气体，并打印“dangerous”</span></span><br><span class="line">            <span class="keyword">print</span> ( <span class="string">' 检测到危险气体 ! ! ! '</span> )</span><br><span class="line">   time.sleep(<span class="number">1</span>) <span class="comment"># 睡眠0.1秒，以后再执行while循环</span></span><br><span class="line">     <span class="keyword">except</span> KeyboardInterrupt: <span class="comment"># 异常处理，当检测按下键盘的Ctrl+C，就会退出这个&gt;脚本</span></span><br><span class="line">               GPIO.cleanup() <span class="comment"># 清理运行完成后的残余</span></span><br></pre></td></tr></table></figure></div><p>注意： 复制他人的代码，第一次测试的时候可能报错，google后发现是因为缩进的错误，即表面上看是缩进了，其实没有缩进。建议自己亲手打一遍。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基于MQ-2的烟雾报警传感器的实验
+    
+    </summary>
+    
+    
+    
+      <category term="技巧" scheme="https://theboy.top/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="传感器" scheme="https://theboy.top/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ubuntu更换阿里源</title>
     <link href="https://theboy.top/2020/03/09/ubuntu%E6%9B%B4%E6%8D%A2%E9%98%BF%E9%87%8C%E6%BA%90/"/>
     <id>https://theboy.top/2020/03/09/ubuntu%E6%9B%B4%E6%8D%A2%E9%98%BF%E9%87%8C%E6%BA%90/</id>
