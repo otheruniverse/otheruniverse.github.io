@@ -66,40 +66,57 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><% if (pagination == 2){ %>
-  <% page.posts.each(function(post){ %>
-    <%- partial('article', {post: post, index: true}) %>
-  <% }) %>
-<% } else { %>
-  <% var last; %>
-  <% page.posts.each(function(post, i){ %>
-    <% var year = post.date.year(); %>
-    <% if (last != year){ %>
-      <% if (last != null){ %>
-        </div></section>
-      <% } %>
-      <% last = year; %>
-      <section class="global-container archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
-        </div>
-        <div class="archives">
-    <% } %>
-    <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
-  <% }) %>
-  <% if (page.posts.length){ %>
-    </div></section>
-  <% } %>
-<% } %>
-<% if (page.total > 1){ %>
+        <section id="main">
+  
+    <article id="post-写作日常" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/06/%E5%86%99%E4%BD%9C%E6%97%A5%E5%B8%B8/">写作日常</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/03/06/%E5%86%99%E4%BD%9C%E6%97%A5%E5%B8%B8/" class="article-date">
+  <time datetime="2020-03-05T16:00:09.000Z" itemprop="datePublished">2020-03-06</time>
+</a>
+    
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E5%B7%A7/" rel="tag">技巧</a></li></ul>
+
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>欢迎来到<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>！这是我的第一篇文章。查看<a href="https://hexo.io/docs/" target="_blank" rel="noopener">文档</a>以获取更多信息。如果在使用Hexo时遇到任何问题，可以在<a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">故障排除</a>中找到答案，也可以在<a href="https://github.com/otheruniverse/" target="_blank" rel="noopener">GitHub</a>上问我。</p>
+        
+          <p class="article-more-link">
+            <a href="/2020/03/06/%E5%86%99%E4%BD%9C%E6%97%A5%E5%B8%B8/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+
+
   <nav id="page-nav">
-    <% var prev_text = "<< " + __('prev');var next_text = __('next') + " >>"%>
-    <%- paginator({
-      prev_text: prev_text,
-      next_text: next_text
-    }) %>
+    
+    <a class="extend prev" rel="prev" href="/">&lt;&lt; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </nav>
-<% } %>
+
 
 </section>
         <aside id="sidebar">
