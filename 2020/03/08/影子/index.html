@@ -144,22 +144,22 @@
   </div>
 </nav>
 
-    <link rel="stylesheet" href="/css/gitment.css"> 
-<script src="/js/gitment.js"></script>
-<% if (!index && post.comments){ %>
+    <link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css ">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
+
 <div id="gitmentContainer"></div>
 <script>
 var gitment = new Gitment({
-  owner: '<%= theme.gitment.owner %>',
-  repo: '<%= theme.gitment.repo %>',
+  owner: 'otheruniverse',
+  repo: 'otheruniverse.github.io',
   oauth: {
-    client_id: '<%= theme.gitment.client_id %>',
-    client_secret: '<%= theme.gitment.client_secret %>',
+    client_id: 'c8f459949b1564d0743f',
+    client_secret: 'ad42a455fc694c53d807c0bac5ff490b3c3df48b',
   },
 })
 gitment.render('gitmentContainer')
 </script>
-<% } %>
+
 
   
   
