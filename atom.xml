@@ -44,7 +44,7 @@
     <published>2020-03-22T13:20:57.000Z</published>
     <updated>2020-03-22T13:20:57.000Z</updated>
     
-    <content type="html"><![CDATA[<p><video src="http://q6vrwyscb.bkt.clouddn.com/%E6%97%A0%E6%9C%9F.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<p><video src="http://q6vrwyscb.bkt.clouddn.com/%E6%97%A0%E6%9C%9F.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p><a id="more"></a><p>这样的生活还有什么意义～ 每天重复的活在担忧，无奈，随波逐流中。感觉身体一天天麻木，被人刮去了血肉，填上了稻草，慢慢的变成了一个稻草人。<br>我要稳稳地幸福，能抵挡末日的残酷，在不安的深夜，能有个归宿。自从18岁以来，我再也没有感受过真真实实的快乐，每一天，都是痛苦的忍耐，那些微小的自我感动，也不过是昨夜烟雨，徒增伤感，无限。<br>回首过去，我最对不起的人，是往日的自己，曾经那个坐在操场上，手上捧着英语课本，天马行空的幻想着成年后精彩的人生，一身低调而又张扬的派头，行走与世间，向阳而生。<br>可如今，却是这幅下场，活成了这世间最没有的那个人，深盘心底的难过，以为明天可能变好，强颜欢笑，可悲的是，我的梦在不知不觉中遥遥无期。高城说：早熟的人往往晚熟，骄傲的人而又急性。 我现在真的想听一首歌，它的歌名叫《无期》。</p>]]></content>
     
     <summary type="html">
     
@@ -140,9 +140,9 @@
     
     
     
-      <category term="心情" scheme="https://theboy.top/tags/%E5%BF%83%E6%83%85/"/>
-    
       <category term="随笔" scheme="https://theboy.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="心情" scheme="https://theboy.top/tags/%E5%BF%83%E6%83%85/"/>
     
   </entry>
   
