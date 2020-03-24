@@ -145,6 +145,7 @@
 <div id="gitmentContainer"></div>
 <script>
 var gitment = new Gitment({
+  id: decodeURI(window.location.pathname)
   owner: 'otheruniverse',
   repo: 'otheruniverse.github.io',
   oauth: {
