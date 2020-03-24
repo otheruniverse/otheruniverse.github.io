@@ -71,6 +71,72 @@ html,body{height: 100%;}
             border-radius: 0px;
         }
         
+/*  以上为旋转立方体css，以下为全网页css */        
+        
+       a {
+        　　text-decoration: none;
+        　　color: #eeeeee;
+        }       
+       #nave {
+        　　line-height: 20px;
+                background-color: grab(255,255,255,0.7);
+                height: 900px;
+                width: 20%;
+                float: left;
+                padding: 0px;
+        }
+        #section {
+            float:left;
+            background-color: grab(0,0,255,0.7);
+            width: 60%;
+            height: 1900px;
+            border-color: #eeeeee;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
+        }
+        #mav {
+            line-height: 20px;
+            background-color: grab(255,255,255,0.7);
+            height: 1500px;
+            width: 17%;
+            float: right;
+            padding: 5px;
+        }
+        #clockdiv {
+            text-align: center;
+        } 
+        #binft {
+        　　height: 50px;
+            color:#adff2f;
+            padding: 5px;
+        }
+        #kong {
+            height: 350px;
+        }
+        #toTop {
+            background: url(//o_toTop.bmp) no-repeat 0px top;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            position: fixed;
+            right: 19%;
+            bottom: 20px;
+            cursor: pointer;
+        }
+        #footer {
+        　　background-color: grab(255,255,255,0.7);
+            width: 100%;
+            height: 60px;
+            clear:both;
+            text-align:center;
+            padding:5px; 
+        }
+        #demo {
+        　　width:360px;
+        　　margin:60px auto 10px auto;
+        }
+        #demo p{
+        　　padding:10px 0;
+        }
 </style>
-
-

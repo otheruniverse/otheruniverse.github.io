@@ -1,566 +1,495 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
-
+<head>
+	   <meta name="generator" content="Hexo 3.9.0">
        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
        <link rel="stylesheet" href="about.css" type="text/css">
-       <link href="APlayer.min.css" rel="stylesheet">
-       <link rel="shortcut icon" href="favicon.ico">
-       <script src="APlayer.min.js"></script>
-       
+       <link href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+	   <script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
        <title>cool我</title>
-       
-       <style>
-       a {
-        　　text-decoration: none;
-        　　color: #eeeeee;
-        }       
-       #nave {
-        　　line-height: 20px;
-                background-color: grab(255,255,255,0.7);
-                height: 900px;
-                width: 20%;
-                float: left;
-                padding: 0px;
-        }
-        #section {
-            float:left;
-            background-color: grab(0,0,255,0.7);
-            width: 60%;
-            height: 1900px;
-            border-color: #eeeeee;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            padding: 0px;
-        }
-        #mav {
-            line-height: 20px;
-            background-color: grab(255,255,255,0.7);
-            height: 1500px;
-            width: 17%;
-            float: right;
-            padding: 5px;
-        }
-        #clockdiv {
-            text-align: center;
-        } 
-        #binft {
-        　　height: 50px;
-            color:#adff2f;
-            padding: 5px;
-        }
-        #kong {
-            height: 350px;
-        }
-        #toTop {
-            background: url(//o_toTop.bmp) no-repeat 0px top;
-            width: 100px;
-            height: 100px;
-            overflow: hidden;
-            position: fixed;
-            right: 19%;
-            bottom: 20px;
-            cursor: pointer;
-        }
-        #footer {
-        　　background-color: grab(255,255,255,0.7);
-            width: 100%;
-            height: 60px;
-            clear:both;
-            text-align:center;
-            padding:5px; 
-        }
-        #demo {
-        　　width:360px;
-        　　margin:60px auto 10px auto;
-        }
-        #demo p{
-        　　padding:10px 0;
-        }
-    </style>
-    
+       <link rel="shortcut icon" href="http://q7oe30tcr.bkt.clouddn.com/favicon.ico">
 <link rel="alternate" href="/atom.xml" title="朝闻道 夕死可矣" type="application/atom+xml">
 </head>
 
 <body id="atop">
-    <!--第二栏-->
-    <div id="nave">
+	<!--第二栏-->
+	<div id="nave">
         <!--GitHub图标-->
         <a href="https://github.com/otheruniverse" target="_blank" rel="noopener">
             <img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
-        </a>
-    <!--旋转立方体-->
-        <div class="wrap">
-            <div class="box1 box">
-                <img src="o_644%20(14).png">
-            </div>
-            <div class="box2 box">
-                <img src="o_644%20(10).png">
-            </div>
-            <div class="box3 box">
-                <img src="o_644%20(8).png">
-            </div>
-            <div class="box4 box">
-                <img src="o_644%20(6).png">
-            </div>
-            <div class="box5 box">
-                <img src="o_644%20(40).png">
-            </div>
-            <div class="box6 box">
-                <img src="o_644%20(10).png">
-            </div>
-        </div>
-      　<!--彩色字体-->
-        <div id="binft"></div>
-        <script>
-            var binft = function (r) {
-                function t() {
-                    return b[Math.floor(Math.random() * b.length)]
-                }  
-                function e() {
-                    return String.fromCharCode(94 * Math.random() + 33)
-                }
-                function n(r) {
-                    for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
-                    var l = document.createElement("span");
-                    l.textContent = e(), l.style.color = t(), n.appendChild(l)
-                }
-                return n
-            }
-            function i() {
-                var t = o[c.skillI];
-                c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
-            }
-            var l = "",
-            o = ["你本无意穿堂风 偏偏孤倨引山洪。", "谈起我的梦想，我为之热泪盈眶。","本是青灯不归客，却因浊酒恋红尘", "从此放下离愁，生生世世酒敬自由。","美丽的如此纯粹，脆弱的令人心碎。"].map(function (r) {
-            return r + ""
-            }),
-            a = 2,
-            g = 1,
-            s = 5,
-            d = 75,
-            b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
-            c = {
-                text: "",
-                prefixP: -s,
-                skillI: 0,
-                skillP: 0,
-                direction: "forward",
-                delay: a,
-                step: g
-            };
-                i()
-            };
-            binft(document.getElementById('binft'));
-        </script>
-        <!--音乐图标-->
-        <div id="music">
-            <div class="demo">
-                <p><strong>听首歌吧</strong></p>
-                <div id="player1">
-                    <pre class="aplayer-lrc-content">
-                    [00:00.00] 作曲 : 林一峰
-                        [00:01.00] 作词 : 易家扬
-                        [00:24.898]听见 冬天的离开
-                        [00:29.697]我在某年某月 醒过来
-                        [00:34.768]我想 我等 我期待
-                        [00:40.598]未来却不能因此安排
-                        [00:53.398]阴天 傍晚 车窗外
-                        [00:58.758]未来有一个人在等待
-                        [01:04.298]向左向右向前看
-                        [01:09.599]爱要拐几个弯才来
-                        [01:14.369]我遇见谁 会有怎样的对白
-                        [01:19.638]我等的人 他在多远的未来
-                        [01:24.839]我听见风来自地铁和人海
-                        [01:30.399]我排着队 拿着爱的号码牌
-                        [01:56.388]阴天 傍晚 车窗外
-                        [02:02.298]未来有一个人在等待
-                        [02:06.650]向左向右向前看
-                        [02:12.000]爱要拐几个弯才来
-                        [02:16.980]我遇见谁 会有怎样的对白
-                        [02:22.289]我等的人 他在多远的未来
-                        [02:27.989]我听见风来自地铁和人海
-                        [02:32.688]我排着队 拿着爱的号码牌
-                        [02:43.380]我往前飞 飞过一片时间海
-                        [02:48.298]我们也曾在爱情里受伤害
-                        [02:53.689]我看着路 梦的入口有点窄
-                        [02:58.748]我遇见你是最美丽的意外
-                        [03:05.888]总有一天 我的谜底会揭开
-                    </pre>
-                </div>
-            </div>
-            <script>
-                var ap = new APlayer
-                ({
-                    element: document.getElementById('player1'),
-                    narrow: false,
-                    autoplay: true,
-                    showlrc: true,
-                    music: {
-                            title: '遇见',
-                            author: '孙燕姿',
-                            url: 'http://music.163.com/song/media/outer/url?id=287035.mp3',
-                            pic: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000002ehzTm0TxXC2.jpg'
-                    }
-                });
-                ap.init();
-            </script>
-        </div>
-    </div>
-    <!--第三栏-->
-    <div id="section">
-        <center>
-        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="华文彩云" color="#00FFFF">明</font>
-        <font color="#00CCFF" face="方正综艺简体">日</font><font color="#0099FF">语</font><font color="#0066FF">录</font></h1>
-        <font color="00BFF3" size="4">想要</font><font color="#339966" face="华文彩云" size="6">往前跑</font><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <font color="F7941D">就得忘掉</font><font color="#ff3300" size="6" face="方正综艺简体">过去</font>
-        <br><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <font color="#999999" size="5">我叫田斌斌，生于1998年。
-喜欢看火影，也喜欢海贼王。喜欢火影里的路飞，索隆，山治。还喜欢鸣人，以及自来也。
-爱好是打篮球，看小说，睡觉。看小说和睡觉的时间加起来超过我人生的二分之一。我经常会做一些梦，梦见自己在广阔的大草原上，在走着清澈河流的山谷里，在漫天星辰下。
-我最怕的事爱的事物离去，怕一个人，怕黑。我幸运的有着一个健康的身体，和一个不怎么优秀的灵魂。我喜欢有很多朋友，但发现时间会让他们渐渐离去。
-我的优点是什么都喜欢，就是什么了。缺点是很懒，懒得做一切就结束了。如果说有什么成绩的话，我不吃不喝躺在床上好几天，还活着。
-我有一个小小的梦想，想有一个魁梧健美的体格，想有独特优秀的气质，想带着简单的装备走遍世界的每个角落，想养很多呆呆的小动物，想快乐的生活每一天，活在当下。我二十一岁，至今还没谈过女朋友，也没想过，如果命中注定我不是一个人，那么我会找到她，如果没有，请让我享受人生，将青春燃烧进岁月，化作暮鼓的风，融入世界的呼吸里。
-    半夜两点半，我还一个人躺着床上，听着熟悉的音乐，想着不知名的远方……
-&quot;
-        </font>
-        <br>
-        <font color="#FF0000" face="华文彩云">TBB</font>
-        </center>
-    </div>
-    <!--第四栏-->
-    <div id="mav">
-        <!--时钟-->
-        <div id="clockdiv">
-            <canvas id="dom" width="120" height="120">时钟canvas</canvas>
-        </div>
-        <script type="text/javascript" src="https://files.cnblogs.com/files/shwee/clock.js"></script>
-         <!-- 添加公告栏 -->
-         <p>签名：</p>
-         <blockquote><b style="front-family:verdana;color:#ff0000"><br>"书不记，熟读可记;义不精，细思可精;惟有志不立，直是无着力处。"<br><br></b></blockquote>
-         <hr>
-         <div id="kong"></div>
-         <!--把“XXXXXXXX”替换成你的QQ号-->
-         <a target="_blank" href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2394274017" "><img border="0" src="http://wpa.qq.com/pa?p=1:2394274017:13" alt="有事您Q我" title="有事您Q我"> </a>
-         <embed src="weixin.png" width="200" height="200" allownetworking="all">
-         <p>我的微信在这</p>
-         <address>
-            Written by 
-            <a href="mailto:TBB12138@outlook.com" target="_blank" rel="noopener">tianbinbin</a><p>(点击发送邮件)</p><br> 
-        </address>
-    </div>
-    <!--低栏-->
-    <div id="toTop">
-        <a href="#atop"><img src="http://images.cnblogs.com/cnblogs_com/shwee/1218109/o_toTop.bmp">
-        </a>
-    </div>
-    <!--页脚-->
-    <div id="footer">
-        <h4>博主最帅</h4>
-    </div>
-    <!--主页背景设置-->　
-    <style>
-        #Canvas{
-            position:fixed;
-            top:0px;
-            left:0px;
-        }
-    </style>
-    <canvas id="Canvas"></canvas>
-    <style>
-        #nav { 
-            width:150px; 
-            height: 400px; 
-            border: 1px solid #D4CD49; 
-            position:fixed;left:0;top:30% 
-        }
-    </style>
-    <script>
-        window.requestAnimFrame=
-        window.requestAnimationFrame||
-        window.webkitRequestAnimationFrame||
-        window.mozRequestAnimationFrame||
-        window.oRequestAnimationFrame||
-        window.msRequestAnimationFrame||
-        function(callback){window.setTimeout(callback, 1000/10);};
-        var W=document.body.scrollWidth,H=document.body.scrollHeight;
-        var ca=document.getElementById("Canvas"),el=ca.getContext("2d");
-        var num=0,SpeedBasic=3,SpeedRand=0.8,angleBasic=0.5,timer,lline=20;
-        var x=new Array(),y=new Array(),speed=new Array(),angle=new Array(),t=new Array(),TT=new Array();
-        var img1=new Image(),img2=new Image(),img3=new Image(),img4=new Image();
-        function RandomNum(Min,Max){
-            var Range=Max-Min;
-            var Rand=Math.random();
-            return(Min+Math.round(Rand * Range));
-        }
-        function RandomReal(Min,Max){
-            return Min+(Max-Min)*Math.random();
-        }
-        function abs(W){
-            return W<=0?-W:W;
-        }
-        function drawtail(px,py,an){
-            an=Math.atan(an);
-            for (var i=0;i<10;i++){
-                var X,Y;
-                Y=Math.sqrt(RandomReal(0,lline*lline));
-                X=RandomReal(-Y*5/lline,Y*5/lline)+RandomReal(-Y*5/lline,Y*5/lline);
-                Y=lline-Y;
-                X+=10;
-                el.fillRect(px+(X*Math.cos(an)-Y*Math.sin(an)),py-(X*Math.sin(an)+Y*Math.cos(an)),2,2);
-            }
-        }
-        function drawstar(px,py,ti){
-            if (ti==1) el.drawImage(img1,px,py,20,20);else
-            if (ti==2) el.drawImage(img2,px,py,20,20);else
-            if (ti==3) el.drawImage(img3,px,py,20,20);else
-            if (ti==4) el.drawImage(img4,px,py,20,20);
-        }
-        function drawline(sx,sy,px,py){
-            el.beginPath();
-            el.moveTo(sx,sy);
-            el.lineTo(px,py);
-            el.stroke();
-            el.closePath();
-        }
-        function dis(sx,sy,px,py){
-            return Math.sqrt((px-sx)*(px-sx)+(py-sy)*(py-sy));
-        }
-        function work(timestamp){
-            if (RandomNum(0,5)==0){
-                x.push(RandomNum(0,W));
-                y.push(RandomNum(0,H));
-                t.push(0);
-                TT.push(RandomNum(3,10));
-                speed.push(SpeedBasic+RandomReal(-SpeedRand,SpeedRand)+RandomReal(-SpeedRand,SpeedRand)+RandomReal(-SpeedRand,SpeedRand));
-                angle.push(RandomReal(-angleBasic,angleBasic)+RandomReal(-angleBasic,angleBasic)+RandomReal(-angleBasic,angleBasic));
-                for (;;){
-                    if (Math.random()<=0.7) y[num]=0;else{
-                        y[num]%=200;
-                            if (Math.random()<=0.5) x[num]=0,angle[num]=abs(angle[num]);else x[num]=W-1,angle[num]=-abs(angle[num]);
-                        }
-                        var i;
-                        for (i=0;i<num;i++) if (dis(x[i],y[i],x[num],y[num])<20) break;
-                        if (i==num) break;
-                        x[num]=RandomNum(0,W);y[num]=RandomNum(0,H);
-                }
-                num++;
-            }
-            el.clearRect(0,0,W,H);
-            el.fillStyle="#7B68EE";
-            var tmp;
-            for (var i=0;i<num;i++)
-            for (var j=i+1;j<num;j++)
-            if (dis(x[i],y[i],x[j],y[j])<20){
-                tmp=speed[i];
-                speed[i]=speed[j];
-                speed[j]=tmp;
-                tmp=angle[i];
-                angle[i]=angle[j];
-                angle[j]=tmp;
-            }
-            for (var i=0;i<num;i++){
-                //el.fillRect(x[i],y[i],10,10);
-                drawtail(x[i],y[i],angle[i]);
-                drawstar(x[i],y[i],(parseInt(t[i]/TT[i])%4)+1);
-                y[i]+=speed[i];x[i]+=(speed[i]*angle[i]);
-                t[i]++;
-                if (y[i]>=H||x[i]<0||x[i]>=W){
-                    num--;
-                    x[i]=x[num];y[i]=y[num];speed[i]=speed[num];angle[i]=angle[num];t[i]=t[num];TT[i]=TT[num];
-                    x.pop();y.pop();speed.pop();angle.pop();t.pop();TT.pop();
-                    i--;
-                }
-            }
-            timer=requestAnimationFrame(work);
-        }
-        timer=requestAnimationFrame(work);
-        var sta=1;
-        function control(){
-            if (sta==1){
-                cancelAnimationFrame(timer);
-                ca.style.opacity="0";
-                sta=0;
-            }
-            else{
-                timer=requestAnimationFrame(work);
-                ca.style.opacity="1";
-                sta=1;
-            }
-        }
-        function ShowTab(){
-            dx=document.getElementById("MagicArray");
-            if (dx.style.width=="200px"){
-                dx.style.width="0px";
-                dx.style.height="0px";
-                dx.style.bottom="100px";
-                dx.style.right="100px";
-                dx.style.transform="rotate(0deg)";
-            }
-            else{
-                dx.style.width="200px";
-                dx.style.height="200px";
-                dx.style.bottom="0px";
-                dx.style.right="0px";
-                dx.style.transform="rotate(180deg)";
-            }
-            dy=document.getElementsByName("Tab");
-            for (var i=0;i<y.length;i++){
-                dx=dy[i];
-                if (dx.style.fontSize=="15px"){
-                    dx.style.fontSize="0px";
-                    dx.style.transitionDelay="0s";
-                }
-                else{
-                    dx.style.fontSize="15px";
-                    dx.style.transitionDelay="0.8s";
-                }
-            }
-        }
-        function ShowPicture(){
-            dx=document.getElementById("main");
-            if (dx.style.opacity=="0") dx.style.opacity="0.9";else dx.style.opacity="0";
-        }
-        function ChangePicture(){
-            dx=document.body;
-            dy=RandomNum(0,14);
-            if (dy==0){
-                dx.style.background="url(o_pic2.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==1){
-                dx.style.background="url(o_picture1.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==2){
-                dx.style.background="url(o_ghostblade_by_wlop_d8i94nx-fullview.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==3){
-                dx.style.background="url(o_164404qas98559n01slq07.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==4){
-                dx.style.background="url(o_darvb38-6e015fe5-ca69-4e7f-bfce-9a515a26ba37.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==5){
-                dx.style.background="url(o_dba1c7d-ef42bfde-ec75-42d3-8e77-0534f4bcc528.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==6){
-                dx.style.background="url(o_dbjz9lh-829f3d6d-50d3-404d-bcd9-9099e59076e2.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==7){
-                dx.style.background="url(o_dc4f3ik-1183f349-fc4f-4b07-a3e3-2b238ddb9adb.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==8){
-                dx.style.background="url(o_dcauzp2-3acd9be8-5ac6-4747-9b72-f95fe1c3c730.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==9){
-                dx.style.background="url(o_fall_by_wlop_dbmfxto-fullview.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==10){
-                dx.style.background="url(o_dccxg4s-28ec7113-ec88-4688-96f0-dd8c28e587f5.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==11){
-                dx.style.background="url(o_WLOP%20%e9%ac%bc%e5%88%80%20%e5%b0%8f%e7%bb%bf%204K%e5%a3%81%e7%ba%b8.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-            else if (dy==12){
-                dx.style.background="url(o_wlop%e9%ac%bc%e5%88%80%e9%ab%98%e6%b8%85%e5%a3%81%e7%ba%b81920x1241.jpg) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }else if (dy==13){
-                dx.style.background="url(o_627cdf7f0c228c9748674e157a179820.png) no-repeat fixed";
-                dx.style.backgroundSize="cover";
-            }
-        }
-        ChangePicture();
-    </script>
-    <!--鼠标点击特效-->
-    <script type="text/javascript">
-        onload = function() {
-            var click_cnt = 0;
-            var $html = document.getElementsByTagName("html")[0];
-            var $body = document.getElementsByTagName("body")[0];
-            $html.onclick = function(e) {
-                $elem = document.createElement("b");
-                $elem.style.color = "#ef9900";/*点击效果颜色*/
-                $elem.style.zIndex = 9999;
-                $elem.style.position = "absolute";
-                $elem.style.select = "none";
-                var x = e.pageX;
-                var y = e.pageY;
-                $elem.style.left = (x - 10) + "px";
-                $elem.style.top = (y - 20) + "px";
-                clearInterval(anim);
-                switch (++click_cnt) {
-                case 10:
-                    $elem.innerText = "<(￣3￣)> 表！";
-                    break;
-                case 20:
-                    $elem.innerText = "ʅ（´◔౪◔）ʃ";
-                    break;
-                case 30:
-                    $elem.innerText = "(๑•́ ₃ •̀๑)";
-                    break;
-                case 40:
-                    $elem.innerText = "(๑•̀_•́๑)";
-                    break;
-                case 50:
-                    $elem.innerText = "ヾ(≧∇≦*)ゝ";
-                    break;
-                case 60:
-                    $elem.innerText = "(￣▽￣)～■干杯□～(￣▽￣)";
-                    break;
-                case 70:
-                    $elem.innerText = "Ψ(￣∀￣)Ψ";
-                    break;
-                case 80:
-                    $elem.innerText = "╮(｡>口<｡)╭";
-                    break;
-                case 90:
-                    $elem.innerText = "( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃";
-                    break;
-                case 100:
-                    $elem.innerText = "(ノへ￣、)";
-                    break;
-                case 101:
-                    $elem.innerText = "o(￣ε￣*)";
-                    break;
-                case 102:/*此处可以按照上面的格式添加表情*/
-                case 103:
-                case 104:
-                case 105:
-                    $elem.innerText = "(ꐦ°᷄д°᷅)";
-                    break;
-                default:
-                    $elem.innerText = "٩(●´৺`●)وbiu";
-                    break;
-                }
-                $elem.style.fontSize = Math.random() * 10 + 8 + "px";
-                var increase = 0;
-                var anim;
-                setTimeout(function() {
-                    anim = setInterval(function() {
-                        if (++increase == 150) {
-                            clearInterval(anim);
-                            $body.removeChild($elem);
-                        }
-                        $elem.style.top = y - 20 - increase + "px";
-                        $elem.style.opacity = (150 - increase) / 120;
-                    }, 8);
-                }, 70);
-                $body.appendChild($elem);
-            };
-        };
-    </script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+        </a> 
+		<!--旋转立方体-->
+		<div class="wrap">
+			<div class="box1 box">
+		    	<img src="http://q7oe30tcr.bkt.clouddn.com/o_644%20%2810%29%20%281%29.png">
+		    </div>
+		    <div class="box2 box">
+		        <img src="http://q7oe30tcr.bkt.clouddn.com/o_644%20%2810%29.png">
+		    </div>
+		    <div class="box3 box">
+		        <img src="http://q7oe30tcr.bkt.clouddn.com/o_644%20%2814%29.png">
+		    </div>
+		    <div class="box4 box">
+		        <img src="http://q7oe30tcr.bkt.clouddn.com/o_644%20%2840%29.png">
+		    </div>
+		    <div class="box5 box">
+		        <img src="http://q7oe30tcr.bkt.clouddn.com/o_644%20%286%29.png">
+	        </div>
+	        <div class="box6 box">	
+				<img src="http://q7oe30tcr.bkt.clouddn.com/o_644%20%288%29.png">
+		    </div>
+		</div>
+		    <!--彩色字体-->
+		    <div id="binft"></div>
+		    <script>
+		        var binft = function (r) {
+		            function t() {
+		                return b[Math.floor(Math.random() * b.length)]
+		            }  
+		            function e() {
+		                return String.fromCharCode(94 * Math.random() + 33)
+		            }
+		            function n(r) {
+		                for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+		                var l = document.createElement("span");
+		                l.textContent = e(), l.style.color = t(), n.appendChild(l)
+		            }
+		            return n
+		        }
+		        function i() {
+		            var t = o[c.skillI];
+		            c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+		        }
+		        var l = "",
+		        o = ["你本无意穿堂风 偏偏孤倨引山洪。", "谈起我的梦想，我为之热泪盈眶。","本是青灯不归客，却因浊酒恋红尘", "从此放下离愁，生生世世酒敬自由。","美丽的如此纯粹，脆弱的令人心碎。"].map(function (r) {
+		        return r + ""
+		        }),
+		        a = 2,
+		        g = 1,
+		        s = 5,
+		        d = 75,
+		        b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+		        c = {
+		            text: "",
+		            prefixP: -s,
+		            skillI: 0,
+		            skillP: 0,
+		            direction: "forward",
+		            delay: a,
+		            step: g
+		        };
+		            i()
+		        };
+		        binft(document.getElementById('binft'));
+		    </script>
+		    <!--音乐图标-->
+		    <div id="music">
+		        <div class="demo">
+		            <p><strong>听首歌吧</strong></p>
+		            <div id="player1">
+		                <pre class="aplayer-lrc-content">
+		                [00:00.00] 作曲 : 林一峰
+		                    [00:01.00] 作词 : 易家扬
+		                    [00:24.898]听见 冬天的离开
+		                    [00:29.697]我在某年某月 醒过来
+		                    [00:34.768]我想 我等 我期待
+		                    [00:40.598]未来却不能因此安排
+		                    [00:53.398]阴天 傍晚 车窗外
+		                    [00:58.758]未来有一个人在等待
+		                    [01:04.298]向左向右向前看
+		                    [01:09.599]爱要拐几个弯才来
+		                    [01:14.369]我遇见谁 会有怎样的对白
+		                    [01:19.638]我等的人 他在多远的未来
+		                    [01:24.839]我听见风来自地铁和人海
+		                    [01:30.399]我排着队 拿着爱的号码牌
+		                    [01:56.388]阴天 傍晚 车窗外
+		                    [02:02.298]未来有一个人在等待
+		                    [02:06.650]向左向右向前看
+		                    [02:12.000]爱要拐几个弯才来
+		                    [02:16.980]我遇见谁 会有怎样的对白
+		                    [02:22.289]我等的人 他在多远的未来
+		                    [02:27.989]我听见风来自地铁和人海
+		                    [02:32.688]我排着队 拿着爱的号码牌
+		                    [02:43.380]我往前飞 飞过一片时间海
+		                    [02:48.298]我们也曾在爱情里受伤害
+		                    [02:53.689]我看着路 梦的入口有点窄
+		                    [02:58.748]我遇见你是最美丽的意外
+		                    [03:05.888]总有一天 我的谜底会揭开
+		                </pre>
+		            </div>
+		        </div>
+		        <script>
+		            var ap = new APlayer
+		            ({
+		                element: document.getElementById('player1'),
+		                narrow: false,
+		                autoplay: true,
+		                showlrc: true,
+		                music: {
+		                        title: '遇见',
+		                        author: '孙燕姿',
+		                        url: 'http://music.163.com/song/media/outer/url?id=287035.mp3',
+		                        pic: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000002ehzTm0TxXC2.jpg'
+		                }
+		            });
+		            ap.init();
+		        </script>
+		    </div>
+		</div>
+		<!--第三栏-->
+		<div id="section">
+		    <center>
+		    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="华文彩云" color="#00FFFF">明</font>
+		    <font color="#00CCFF" face="方正综艺简体">日</font><font color="#0099FF">语</font><font color="#0066FF">录</font></h1>
+		    <font color="00BFF3" size="4">想要</font><font color="#339966" face="华文彩云" size="6">往前跑</font><br>
+		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    <font color="F7941D">就得忘掉</font><font color="#ff3300" size="6" face="方正综艺简体">过去</font>
+		    <br><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    <font color="#999999" size="5">我叫田斌斌，生于1998年。
+	喜欢看火影，也喜欢海贼王。喜欢火影里的路飞，索隆，山治。还喜欢鸣人，以及自来也。
+	爱好是打篮球，看小说，睡觉。看小说和睡觉的时间加起来超过我人生的二分之一。我经常会做一些梦，梦见自己在广阔的大草原上，在走着清澈河流的山谷里，在漫天星辰下。
+	我最怕的事爱的事物离去，怕一个人，怕黑。我幸运的有着一个健康的身体，和一个不怎么优秀的灵魂。我喜欢有很多朋友，但发现时间会让他们渐渐离去。
+	我的优点是什么都喜欢，就是什么了。缺点是很懒，懒得做一切就结束了。如果说有什么成绩的话，我不吃不喝躺在床上好几天，还活着。
+	我有一个小小的梦想，想有一个魁梧健美的体格，想有独特优秀的气质，想带着简单的装备走遍世界的每个角落，想养很多呆呆的小动物，想快乐的生活每一天，活在当下。我二十一岁，至今还没谈过女朋友，也没想过，如果命中注定我不是一个人，那么我会找到她，如果没有，请让我享受人生，将青春燃烧进岁月，化作暮鼓的风，融入世界的呼吸里。
+		半夜两点半，我还一个人躺着床上，听着熟悉的音乐，想着不知名的远方……
+	&quot;
+		    </font>
+		    <br>
+		    <font color="#FF0000" face="华文彩云">TBB</font>
+		    </center>
+		</div>
+		<!--第四栏-->
+		<div id="mav">
+		    <!--时钟-->
+		    <div id="clockdiv">
+		        <canvas id="dom" width="120" height="120">时钟canvas</canvas>
+		    </div>
+		    <script type="text/javascript" src="https://files.cnblogs.com/files/shwee/clock.js"></script>
+		     <!-- 添加公告栏 -->
+		     <p>签名：</p>
+		     <blockquote><b style="front-family:verdana;color:#ff0000"><br>"书不记，熟读可记;义不精，细思可精;惟有志不立，直是无着力处。"<br><br></b></blockquote>
+		     <hr>
+		     <div id="kong"></div>
+		     <!--把“XXXXXXXX”替换成你的QQ号-->
+		     <a target="_blank" href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2394274017" "><img border="0" src="http://wpa.qq.com/pa?p=1:2394274017:13" alt="有事您Q我" title="有事您Q我"> </a>
+		     <embed src="http://q7oe30tcr.bkt.clouddn.com/weixin.png" width="200" height="200" allownetworking="all">
+		     <p>我的微信在这</p>
+		     <address>
+		        Written by 
+		        <a href="mailto:2394274017@qq.com" target="_blank" rel="noopener">tianbinbin</a><p>(点击发送邮件)</p><br> 
+		    </address>
+		</div>
+		<!--低栏-->
+		<div id="toTop">
+		    <a href="#atop"><img src="http://q7oe30tcr.bkt.clouddn.com/o_toTop.bmp">
+		    </a>
+		</div>
+		<!--页脚-->
+		<div id="footer">
+		    <h4>博主最帅</h4>
+		</div>
+		<!--主页背景设置-->　
+		<style>
+		    #Canvas{
+		        position:fixed;
+		        top:0px;
+		        left:0px;
+		    }
+		</style>
+		<canvas id="Canvas"></canvas>
+		<style>
+		    #nav { 
+		        width:150px; 
+		        height: 400px; 
+		        border: 1px solid #D4CD49; 
+		        position:fixed;left:0;top:30% 
+		    }
+		</style>
+		<script>
+		    window.requestAnimFrame=
+		    window.requestAnimationFrame||
+		    window.webkitRequestAnimationFrame||
+		    window.mozRequestAnimationFrame||
+		    window.oRequestAnimationFrame||
+		    window.msRequestAnimationFrame||
+		    function(callback){window.setTimeout(callback, 1000/10);};
+		    var W=document.body.scrollWidth,H=document.body.scrollHeight;
+		    var ca=document.getElementById("Canvas"),el=ca.getContext("2d");
+		    var num=0,SpeedBasic=3,SpeedRand=0.8,angleBasic=0.5,timer,lline=20;
+		    var x=new Array(),y=new Array(),speed=new Array(),angle=new Array(),t=new Array(),TT=new Array();
+		    var img1=new Image(),img2=new Image(),img3=new Image(),img4=new Image();
+		    function RandomNum(Min,Max){
+		        var Range=Max-Min;
+		        var Rand=Math.random();
+		        return(Min+Math.round(Rand * Range));
+		    }
+		    function RandomReal(Min,Max){
+		        return Min+(Max-Min)*Math.random();
+		    }
+		    function abs(W){
+		        return W<=0?-W:W;
+		    }
+		    function drawtail(px,py,an){
+		        an=Math.atan(an);
+		        for (var i=0;i<10;i++){
+		            var X,Y;
+		            Y=Math.sqrt(RandomReal(0,lline*lline));
+		            X=RandomReal(-Y*5/lline,Y*5/lline)+RandomReal(-Y*5/lline,Y*5/lline);
+		            Y=lline-Y;
+		            X+=10;
+		            el.fillRect(px+(X*Math.cos(an)-Y*Math.sin(an)),py-(X*Math.sin(an)+Y*Math.cos(an)),2,2);
+		        }
+		    }
+		    function drawstar(px,py,ti){
+		        if (ti==1) el.drawImage(img1,px,py,20,20);else
+		        if (ti==2) el.drawImage(img2,px,py,20,20);else
+		        if (ti==3) el.drawImage(img3,px,py,20,20);else
+		        if (ti==4) el.drawImage(img4,px,py,20,20);
+		    }
+		    function drawline(sx,sy,px,py){
+		        el.beginPath();
+		        el.moveTo(sx,sy);
+		        el.lineTo(px,py);
+		        el.stroke();
+		        el.closePath();
+		    }
+		    function dis(sx,sy,px,py){
+		        return Math.sqrt((px-sx)*(px-sx)+(py-sy)*(py-sy));
+		    }
+		    function work(timestamp){
+		        if (RandomNum(0,5)==0){
+		            x.push(RandomNum(0,W));
+		            y.push(RandomNum(0,H));
+		            t.push(0);
+		            TT.push(RandomNum(3,10));
+		            speed.push(SpeedBasic+RandomReal(-SpeedRand,SpeedRand)+RandomReal(-SpeedRand,SpeedRand)+RandomReal(-SpeedRand,SpeedRand));
+		            angle.push(RandomReal(-angleBasic,angleBasic)+RandomReal(-angleBasic,angleBasic)+RandomReal(-angleBasic,angleBasic));
+		            for (;;){
+		                if (Math.random()<=0.7) y[num]=0;else{
+		                    y[num]%=200;
+		                        if (Math.random()<=0.5) x[num]=0,angle[num]=abs(angle[num]);else x[num]=W-1,angle[num]=-abs(angle[num]);
+		                    }
+		                    var i;
+		                    for (i=0;i<num;i++) if (dis(x[i],y[i],x[num],y[num])<20) break;
+		                    if (i==num) break;
+		                    x[num]=RandomNum(0,W);y[num]=RandomNum(0,H);
+		            }
+		            num++;
+		        }
+		        el.clearRect(0,0,W,H);
+		        el.fillStyle="#7B68EE";
+		        var tmp;
+		        for (var i=0;i<num;i++)
+		        for (var j=i+1;j<num;j++)
+		        if (dis(x[i],y[i],x[j],y[j])<20){
+		            tmp=speed[i];
+		            speed[i]=speed[j];
+		            speed[j]=tmp;
+		            tmp=angle[i];
+		            angle[i]=angle[j];
+		            angle[j]=tmp;
+		        }
+		        for (var i=0;i<num;i++){
+		            //el.fillRect(x[i],y[i],10,10);
+		            drawtail(x[i],y[i],angle[i]);
+		            drawstar(x[i],y[i],(parseInt(t[i]/TT[i])%4)+1);
+		            y[i]+=speed[i];x[i]+=(speed[i]*angle[i]);
+		            t[i]++;
+		            if (y[i]>=H||x[i]<0||x[i]>=W){
+		                num--;
+		                x[i]=x[num];y[i]=y[num];speed[i]=speed[num];angle[i]=angle[num];t[i]=t[num];TT[i]=TT[num];
+		                x.pop();y.pop();speed.pop();angle.pop();t.pop();TT.pop();
+		                i--;
+		            }
+		        }
+		        timer=requestAnimationFrame(work);
+		    }
+		    timer=requestAnimationFrame(work);
+		    var sta=1;
+		    function control(){
+		        if (sta==1){
+		            cancelAnimationFrame(timer);
+		            ca.style.opacity="0";
+		            sta=0;
+		        }
+		        else{
+		            timer=requestAnimationFrame(work);
+		            ca.style.opacity="1";
+		            sta=1;
+		        }
+		    }
+		    function ShowTab(){
+		        dx=document.getElementById("MagicArray");
+		        if (dx.style.width=="200px"){
+		            dx.style.width="0px";
+		            dx.style.height="0px";
+		            dx.style.bottom="100px";
+		            dx.style.right="100px";
+		            dx.style.transform="rotate(0deg)";
+		        }
+		        else{
+		            dx.style.width="200px";
+		            dx.style.height="200px";
+		            dx.style.bottom="0px";
+		            dx.style.right="0px";
+		            dx.style.transform="rotate(180deg)";
+		        }
+		        dy=document.getElementsByName("Tab");
+		        for (var i=0;i<y.length;i++){
+		            dx=dy[i];
+		            if (dx.style.fontSize=="15px"){
+		                dx.style.fontSize="0px";
+		                dx.style.transitionDelay="0s";
+		            }
+		            else{
+		                dx.style.fontSize="15px";
+		                dx.style.transitionDelay="0.8s";
+		            }
+		        }
+		    }
+		    function ShowPicture(){
+		        dx=document.getElementById("main");
+		        if (dx.style.opacity=="0") dx.style.opacity="0.9";else dx.style.opacity="0";
+		    }
+		    function ChangePicture(){
+		        dx=document.body;
+		        dy=RandomNum(0,14);
+		        if (dy==0){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_WLOP%20%E9%AC%BC%E5%88%80%20%E5%B0%8F%E7%BB%BF%204K%E5%A3%81%E7%BA%B8.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==1){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_WLOP%20%E9%AC%BC%E5%88%80%20%E5%B0%8F%E7%BB%BF%204K%E5%A3%81%E7%BA%B8.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==2){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_dba1c7d-ef42bfde-ec75-42d3-8e77-0534f4bcc528.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==3){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_164404qas98559n01slq07.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==4){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_dbjz9lh-829f3d6d-50d3-404d-bcd9-9099e59076e2.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==5){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_dc4f3ik-1183f349-fc4f-4b07-a3e3-2b238ddb9adb.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==6){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_dcauzp2-3acd9be8-5ac6-4747-9b72-f95fe1c3c730.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==7){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_dccxg4s-28ec7113-ec88-4688-96f0-dd8c28e587f5.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==8){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_fall_by_wlop_dbmfxto-fullview.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==9){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_ghostblade_by_wlop_d8i94nx-fullview.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==10){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_pic2.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==11){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_picture1.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		        else if (dy==12){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_wlop%E9%AC%BC%E5%88%80%E9%AB%98%E6%B8%85%E5%A3%81%E7%BA%B81920x1241.jpg) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }else if (dy==13){
+		            dx.style.background="url(http://q7oe30tcr.bkt.clouddn.com/o_627cdf7f0c228c9748674e157a179820.png) no-repeat fixed";
+		            dx.style.backgroundSize="cover";
+		        }
+		    }
+		    ChangePicture();
+		</script>
+		<!--鼠标点击特效-->
+		<script type="text/javascript">
+		    onload = function() {
+		        var click_cnt = 0;
+		        var $html = document.getElementsByTagName("html")[0];
+		        var $body = document.getElementsByTagName("body")[0];
+		        $html.onclick = function(e) {
+		            $elem = document.createElement("b");
+		            $elem.style.color = "#ef9900";/*点击效果颜色*/
+		            $elem.style.zIndex = 9999;
+		            $elem.style.position = "absolute";
+		            $elem.style.select = "none";
+		            var x = e.pageX;
+		            var y = e.pageY;
+		            $elem.style.left = (x - 10) + "px";
+		            $elem.style.top = (y - 20) + "px";
+		            clearInterval(anim);
+		            switch (++click_cnt) {
+		            case 10:
+		                $elem.innerText = "<(￣3￣)> 表！";
+		                break;
+		            case 20:
+		                $elem.innerText = "ʅ（´◔౪◔）ʃ";
+		                break;
+		            case 30:
+		                $elem.innerText = "(๑•́ ₃ •̀๑)";
+		                break;
+		            case 40:
+		                $elem.innerText = "(๑•̀_•́๑)";
+		                break;
+		            case 50:
+		                $elem.innerText = "ヾ(≧∇≦*)ゝ";
+		                break;
+		            case 60:
+		                $elem.innerText = "(￣▽￣)～■干杯□～(￣▽￣)";
+		                break;
+		            case 70:
+		                $elem.innerText = "Ψ(￣∀￣)Ψ";
+		                break;
+		            case 80:
+		                $elem.innerText = "╮(｡>口<｡)╭";
+		                break;
+		            case 90:
+		                $elem.innerText = "( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃";
+		                break;
+		            case 100:
+		                $elem.innerText = "(ノへ￣、)";
+		                break;
+		            case 101:
+		                $elem.innerText = "o(￣ε￣*)";
+		                break;
+		            case 102:/*此处可以按照上面的格式添加表情*/
+		            case 103:
+		            case 104:
+		            case 105:
+		                $elem.innerText = "(ꐦ°᷄д°᷅)";
+		                break;
+		            default:
+		                $elem.innerText = "٩(●´৺`●)وbiu";
+		                break;
+		            }
+		            $elem.style.fontSize = Math.random() * 10 + 8 + "px";
+		            var increase = 0;
+		            var anim;
+		            setTimeout(function() {
+		                anim = setInterval(function() {
+		                    if (++increase == 150) {
+		                        clearInterval(anim);
+		                        $body.removeChild($elem);
+		                    }
+		                    $elem.style.top = y - 20 - increase + "px";
+		                    $elem.style.opacity = (150 - increase) / 120;
+		                }, 8);
+		            }, 70);
+		            $body.appendChild($elem);
+		        };
+		    };
+		</script>
+	</body>
 </html>
