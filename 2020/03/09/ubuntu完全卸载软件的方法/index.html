@@ -168,21 +168,21 @@
 
     <link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css ">
 <script src="/js/gitment.js"></script>
-
+<% if (!index && post.comments){ %>
 <div id="gitmentContainer"></div>
 <script>
 var gitment = new Gitment({
-  id: 'Mon Mar 09 2020 01:55:59 GMT+0800'
-  owner: 'otheruniverse',
-  repo: 'otheruniverse.github.io',
+  id: '<%=page.date %>'
+  owner: '<%= theme.gitment.owner %>',
+  repo: '<%= theme.gitment.repo %>',
   oauth: {
-    client_id: 'c8f459949b1564d0743f',
-    client_secret: 'ad42a455fc694c53d807c0bac5ff490b3c3df48b',
+    client_id: '<%= theme.gitment.client_id %>',
+    client_secret: '<%= theme.gitment.client_secret %>',
   },
 })
 gitment.render('gitmentContainer')
 </script>
-
+<% } %>
 
   
   
