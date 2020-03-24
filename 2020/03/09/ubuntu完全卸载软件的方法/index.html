@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>ubuntu完全卸载软件的方法 | 朝闻道 夕死可矣</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="hexo ubuntu blog" />
+  
+  <meta name="description" content="本文将告诉你在Ubuntu系统中怎样彻底的卸载常用软件。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu完全卸载软件的方法">
+<meta property="og:url" content="https://theboy.top/2020/03/09/ubuntu%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="朝闻道 夕死可矣">
+<meta property="og:description" content="本文将告诉你在Ubuntu系统中怎样彻底的卸载常用软件。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-08T17:55:59.000Z">
+<meta property="article:modified_time" content="2020-03-08T17:55:59.000Z">
+<meta property="article:author" content="凉快">
+<meta property="article:tag" content="ubuntu">
+<meta property="article:tag" content="技巧">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="朝闻道 夕死可矣" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/ladybug.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" style="background-image: url(/images/bck.png)" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/derm/about.html" title
+        
+        >以梦为马</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-ubuntu完全卸载软件的方法" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      ubuntu完全卸载软件的方法
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/03/09/ubuntu%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2020-03-08T17:55:59.000Z" itemprop="datePublished">2020-03-09</time>
+</a>
+    
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E5%B7%A7/" rel="tag">技巧</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>本文将告诉你在Ubuntu系统中怎样彻底的卸载常用软件。</p>
+<a id="more"></a>
+<p>这里以 nginx 为例，卸载其他软件只需要把 nginx 替换为其他软件名就可以了。</p>
+<p>1.删除nginx，–purge包括配置文件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove --purge nginx</span><br></pre></td></tr></table></figure></div>
+
+<p>2.移除孤立的软件包</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove</span><br></pre></td></tr></table></figure></div>
+
+<p>3.罗列出所有 nginx 的相关软件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg --selections|grep nginx</span><br></pre></td></tr></table></figure></div>
+<p>4.删除这些软件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove --purge nginx nginx-common nginx-core</span><br></pre></td></tr></table></figure></div>
+
+<p>5.全局查找nginx相关的文件(重点!)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo find / -name nginx*</span><br></pre></td></tr></table></figure></div>
+
+<p>6.删除这些文件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo rm -rf file_name</span><br></pre></td></tr></table></figure></div>
+
+<p>file_name替换为5.中具体的文件夹</p>
+<p>7.清理三连</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoclean</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt purge</span><br></pre></td></tr></table></figure></div>
+
+<p>8.更新二连</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>
+
+<p>至此，nginx就完整的从你的系统中消失了，需要注意的是，6.请谨慎操作，否则可能导致无法正常运行！！！</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/03/09/ubuntu%E6%9B%B4%E6%8D%A2%E9%98%BF%E9%87%8C%E6%BA%90/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            ubuntu更换阿里源
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/03/08/%E5%BD%B1%E5%AD%90/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">影子</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  id: 'Mon Mar 09 2020 01:55:59 GMT+0800',
+  owner: 'otheruniverse',
+  repo: 'otheruniverse.github.io',
+  oauth: {
+    client_id: 'c8f459949b1564d0743f',
+    client_secret: 'ad42a455fc694c53d807c0bac5ff490b3c3df48b',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/dd.jpg" title="头像来自网络"></img>
+    <h3 class="avatar-name">
+      
+        青山日暮
+      
+    </h3>
+    <p class="avatar-slogan">
+      天街小雨润如酥，草色遥看近却无，最是一年春好处，绝胜烟柳满皇都
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/" rel="tag">传感器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%83%E6%83%85/" rel="tag">心情</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E5%B7%A7/" rel="tag">技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ubuntu/" style="font-size: 15px;">ubuntu</a> <a href="/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/" style="font-size: 10px;">传感器</a> <a href="/tags/%E5%BF%83%E6%83%85/" style="font-size: 10px;">心情</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 20px;">技巧</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 15px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/10/">十月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/10/01/%E5%8D%81%E6%9C%88%E9%9A%8F%E7%AC%94/">十月随笔</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/22/%E6%97%A0%E6%9C%9F/">无期</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/14/%E7%83%9F%E9%9B%BE%E6%8A%A5%E8%AD%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C/">烟雾报警传感器实验</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/09/ubuntu%E6%9B%B4%E6%8D%A2%E9%98%BF%E9%87%8C%E6%BA%90/">ubuntu更换阿里源</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/09/ubuntu%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/">ubuntu完全卸载软件的方法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://devanswers.co/" title target='_blank'
+        >大神</a>
+      
+        <a style="display: block;" href="https://yelog.org/" title target='_blank'
+        >叶落阁</a>
+      
+        <a style="display: block;" href="https://www.hexothe.me/" title target='_blank'
+        >十大主题</a>
+      
+        <a style="display: block;" href="https://pixabay.com/images/search/wallpaper/" title target='_blank'
+        >壁纸</a>
+      
+        <a style="display: block;" href="http://jandan.net/ooxx" title target='_blank'
+        >煎蛋</a>
+      
+        <a style="display: block;" href="https://haremu.com/about/" title target='_blank'
+        >后宫学长</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 凉快 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/otheruniverse/otheruniverse.github.io.git">gu</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/derm/about.html" class="mobile-nav-link">以梦为马</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

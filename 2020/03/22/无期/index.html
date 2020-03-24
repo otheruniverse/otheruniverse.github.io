@@ -5,25 +5,24 @@
   
 
   
-  <title>烟雾报警传感器实验 | 朝闻道 夕死可矣</title>
+  <title>无期 | 朝闻道 夕死可矣</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   <meta name="keywords" content="hexo ubuntu blog" />
   
-  <meta name="description" content="基于MQ-2的烟雾报警传感器的实验">
+  <meta name="description" content="您的浏览器不支持播放该视频！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="烟雾报警传感器实验">
-<meta property="og:url" content="https://theboy.top/2020/03/14/index.html">
+<meta property="og:title" content="无期">
+<meta property="og:url" content="https://theboy.top/2020/03/22/%E6%97%A0%E6%9C%9F/index.html">
 <meta property="og:site_name" content="朝闻道 夕死可矣">
-<meta property="og:description" content="基于MQ-2的烟雾报警传感器的实验">
+<meta property="og:description" content="您的浏览器不支持播放该视频！">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-14T07:46:08.000Z">
-<meta property="article:modified_time" content="2020-03-14T07:46:08.000Z">
+<meta property="article:published_time" content="2020-03-22T13:20:57.000Z">
+<meta property="article:modified_time" content="2020-03-22T13:20:57.000Z">
 <meta property="article:author" content="凉快">
-<meta property="article:tag" content="技巧">
-<meta property="article:tag" content="传感器">
+<meta property="article:tag" content="hexo ubuntu blog">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="朝闻道 夕死可矣" type="application/atom+xml">
@@ -69,26 +68,24 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-烟雾报警传感器实验" class="article global-container article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-无期" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      烟雾报警传感器实验
+      无期
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2020/03/14/" class="article-date">
-  <time datetime="2020-03-14T07:46:08.000Z" itemprop="datePublished">2020-03-14</time>
+    <a href="/2020/03/22/%E6%97%A0%E6%9C%9F/" class="article-date">
+  <time datetime="2020-03-22T13:20:57.000Z" itemprop="datePublished">2020-03-22</time>
 </a>
     
     
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/" rel="tag">传感器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E5%B7%A7/" rel="tag">技巧</a></li></ul>
-
   </div>
   
     <span id="busuanzi_container_page_pv">
@@ -100,11 +97,9 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>基于MQ-2的烟雾报警传感器的实验<a id="more"></a></p>
-<p>参考链接：<br>    1.<a href="https://blog.51cto.com/13479737/2087546" target="_blank" rel="noopener">基于树莓派（Raspberry Pi）平台的MQ-2烟雾报警系统</a><br>实验步骤：<br>    首先开始连线，传感器上有四个金属接头，试验中会用到三个，分别是：VCC , GND ,DO 。其中，VCC 接５Ｖ电源，四号位，GND接地，六号位，DO 接任意GPIO口，七号位。<br>程序代码：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#! /usr/bin/env python3</span></span><br><span class="line"><span class="keyword">import</span> RPi.GPIO <span class="keyword">as</span> GPIO       <span class="comment">#导入库，并进行别名的设置</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">CHANNEL=<span class="number">7</span>           <span class="comment"># 确定引脚口。按照真实的位置确定</span></span><br><span class="line">GPIO.setmode(GPIO.BOARD) <span class="comment"># 选择引脚系统，这里我们选择了BOARD</span></span><br><span class="line">GPIO.setup(CHANNEL,GPIO.IN,pull_up_down=GPIO.PUD_DOWN)</span><br><span class="line"><span class="comment">#初始化引脚，将7号引脚设置为输入下拉电阻，因为在初始化的时候不确定的的引电平，因此这样设置是用来保证精准，（但是也可以不写“pull_up_down=GPIO.PUD_DOWN”）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 带有异常处理的主程序</span></span><br><span class="line">	    <span class="keyword">try</span>:</span><br><span class="line">	              <span class="keyword">while</span> <span class="literal">True</span>: <span class="comment"># 执行一个while死循环</span></span><br><span class="line">				  status=GPIO.input(CHANNEL) <span class="comment"># 检测36号引脚口的输入高低电平状态</span></span><br><span class="line">				  <span class="comment">#print(status) # 实时打印此时的电平状态</span></span><br><span class="line">				  <span class="keyword">if</span> status == <span class="literal">True</span>: <span class="comment"># 如果为高电平，说明MQ-2正常，并打印“OK”</span></span><br><span class="line">					            <span class="keyword">print</span> ( <span class="string">' 正常 '</span> )</span><br><span class="line">				   <span class="keyword">else</span>:    <span class="comment"># 如果为低电平，说明MQ-2检测到有害气体，并打印“dangerous”</span></span><br><span class="line">					            <span class="keyword">print</span> ( <span class="string">' 检测到危险气体 ! ! ! '</span> )</span><br><span class="line">				   time.sleep(<span class="number">1</span>) <span class="comment"># 睡眠0.1秒，以后再执行while循环</span></span><br><span class="line">     <span class="keyword">except</span> KeyboardInterrupt: <span class="comment"># 异常处理，当检测按下键盘的Ctrl+C，就会退出这个&gt;脚本</span></span><br><span class="line">	               GPIO.cleanup() <span class="comment"># 清理运行完成后的残余</span></span><br></pre></td></tr></table></figure></div>
-
-<p>注意： 复制他人的代码，第一次测试的时候可能报错，google后发现是因为缩进的错误，即表面上看是缩进了，其实没有缩进。建议自己亲手打一遍。</p>
+        <p><video src="http://q6vrwyscb.bkt.clouddn.com/%E6%97%A0%E6%9C%9F.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
+<a id="more"></a>
+<p>这样的生活还有什么意义～ 每天重复的活在担忧，无奈，随波逐流中。感觉身体一天天麻木，被人刮去了血肉，填上了稻草，慢慢的变成了一个稻草人。<br>我要稳稳地幸福，能抵挡末日的残酷，在不安的深夜，能有个归宿。自从18岁以来，我再也没有感受过真真实实的快乐，每一天，都是痛苦的忍耐，那些微小的自我感动，也不过是昨夜烟雨，徒增伤感，无限。<br>回首过去，我最对不起的人，是往日的自己，曾经那个坐在操场上，手上捧着英语课本，天马行空的幻想着成年后精彩的人生，一身低调而又张扬的派头，行走与世间，向阳而生。<br>可如今，却是这幅下场，活成了这世间最没有的那个人，深盘心底的难过，以为明天可能变好，强颜欢笑，可悲的是，我的梦在不知不觉中遥遥无期。高城说：早熟的人往往晚熟，骄傲的人而又急性。 我现在真的想听一首歌，它的歌名叫《无期》。</p>
 
       
     </div>
@@ -119,11 +114,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2020/03/22/" id="article-nav-newer" class="article-nav-link-wrap">
+      <a href="/2025/10/01/%E5%8D%81%E6%9C%88%E9%9A%8F%E7%AC%94/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption"></strong>
         <div class="article-nav-title">
           
-            无期
+            十月随笔
           
         </div>
       </a>
@@ -131,31 +126,32 @@
   </div>
   <div class="article-nav-block">
     
-      <a href="/2020/03/09/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">ubuntu更换阿里源</div>
+      <a href="/2020/03/14/%E7%83%9F%E9%9B%BE%E6%8A%A5%E8%AD%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">烟雾报警传感器实验</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
   </div>
 </nav>
 
-    <link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css ">
+    <link rel="stylesheet" href="/css/gitment.css"> 
 <script src="/js/gitment.js"></script>
-<% if (!index && post.comments){ %>
+
 <div id="gitmentContainer"></div>
+
 <script>
 var gitment = new Gitment({
-  id: '<%=page.date %>',
-  owner: '<%= theme.gitment.owner %>',
-  repo: '<%= theme.gitment.repo %>',
+  id: 'Sun Mar 22 2020 21:20:57 GMT+0800',
+  owner: 'otheruniverse',
+  repo: 'otheruniverse.github.io',
   oauth: {
-    client_id: '<%= theme.gitment.client_id %>',
-    client_secret: '<%= theme.gitment.client_secret %>',
+    client_id: 'c8f459949b1564d0743f',
+    client_secret: 'ad42a455fc694c53d807c0bac5ff490b3c3df48b',
   },
 })
 gitment.render('gitmentContainer')
 </script>
-<% } %>
+
 
   
   
@@ -217,23 +213,23 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
-            <a href="/2025/10/01/">十月随笔</a>
+            <a href="/2025/10/01/%E5%8D%81%E6%9C%88%E9%9A%8F%E7%AC%94/">十月随笔</a>
           </li>
         
           <li>
-            <a href="/2020/03/22/">无期</a>
+            <a href="/2020/03/22/%E6%97%A0%E6%9C%9F/">无期</a>
           </li>
         
           <li>
-            <a href="/2020/03/14/">烟雾报警传感器实验</a>
+            <a href="/2020/03/14/%E7%83%9F%E9%9B%BE%E6%8A%A5%E8%AD%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C/">烟雾报警传感器实验</a>
           </li>
         
           <li>
-            <a href="/2020/03/09/">ubuntu更换阿里源</a>
+            <a href="/2020/03/09/ubuntu%E6%9B%B4%E6%8D%A2%E9%98%BF%E9%87%8C%E6%BA%90/">ubuntu更换阿里源</a>
           </li>
         
           <li>
-            <a href="/2020/03/09/">ubuntu完全卸载软件的方法</a>
+            <a href="/2020/03/09/ubuntu%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/">ubuntu完全卸载软件的方法</a>
           </li>
         
       </ul>
@@ -271,8 +267,8 @@ gitment.render('gitmentContainer')
       </div>
       <footer id="footer">
   <div class="foot-box global-width">
-    &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %> &nbsp;&nbsp;
-    <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &copy; 2020 凉快 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
     &nbsp;|&nbsp;主题 <a href="https://github.com/otheruniverse/otheruniverse.github.io.git">gu</a>
     <br>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

@@ -5,25 +5,25 @@
   
 
   
-  <title>ubuntu完全卸载软件的方法 | 朝闻道 夕死可矣</title>
+  <title>影子 | 朝闻道 夕死可矣</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   <meta name="keywords" content="hexo ubuntu blog" />
   
-  <meta name="description" content="本文将告诉你在Ubuntu系统中怎样彻底的卸载常用软件。">
+  <meta name="description" content="你陪我长大,我陪你到老。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu完全卸载软件的方法">
-<meta property="og:url" content="https://theboy.top/2020/03/09/index.html">
+<meta property="og:title" content="影子">
+<meta property="og:url" content="https://theboy.top/2020/03/08/%E5%BD%B1%E5%AD%90/index.html">
 <meta property="og:site_name" content="朝闻道 夕死可矣">
-<meta property="og:description" content="本文将告诉你在Ubuntu系统中怎样彻底的卸载常用软件。">
+<meta property="og:description" content="你陪我长大,我陪你到老。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-08T17:55:59.000Z">
-<meta property="article:modified_time" content="2020-03-08T17:55:59.000Z">
+<meta property="article:published_time" content="2020-03-07T18:16:09.000Z">
+<meta property="article:modified_time" content="2020-03-07T18:16:09.000Z">
 <meta property="article:author" content="凉快">
-<meta property="article:tag" content="ubuntu">
-<meta property="article:tag" content="技巧">
+<meta property="article:tag" content="心情">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="朝闻道 夕死可矣" type="application/atom+xml">
@@ -69,25 +69,25 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-ubuntu完全卸载软件的方法" class="article global-container article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-影子" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      ubuntu完全卸载软件的方法
+      影子
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2020/03/09/" class="article-date">
-  <time datetime="2020-03-08T17:55:59.000Z" itemprop="datePublished">2020-03-09</time>
+    <a href="/2020/03/08/%E5%BD%B1%E5%AD%90/" class="article-date">
+  <time datetime="2020-03-07T18:16:09.000Z" itemprop="datePublished">2020-03-08</time>
 </a>
     
     
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E5%B7%A7/" rel="tag">技巧</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BF%83%E6%83%85/" rel="tag">心情</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
 
   </div>
   
@@ -100,38 +100,16 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>本文将告诉你在Ubuntu系统中怎样彻底的卸载常用软件。</p>
+        <p>你陪我长大,我陪你到老。</p>
 <a id="more"></a>
-<p>这里以 nginx 为例，卸载其他软件只需要把 nginx 替换为其他软件名就可以了。</p>
-<p>1.删除nginx，–purge包括配置文件</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove --purge nginx</span><br></pre></td></tr></table></figure></div>
-
-<p>2.移除孤立的软件包</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove</span><br></pre></td></tr></table></figure></div>
-
-<p>3.罗列出所有 nginx 的相关软件</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg --selections|grep nginx</span><br></pre></td></tr></table></figure></div>
-<p>4.删除这些软件</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove --purge nginx nginx-common nginx-core</span><br></pre></td></tr></table></figure></div>
-
-<p>5.全局查找nginx相关的文件(重点!)</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo find / -name nginx*</span><br></pre></td></tr></table></figure></div>
-
-<p>6.删除这些文件</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo rm -rf file_name</span><br></pre></td></tr></table></figure></div>
-
-<p>file_name替换为5.中具体的文件夹</p>
-<p>7.清理三连</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoclean</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt autoremove</span><br></pre></td></tr></table></figure></div>
-
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt purge</span><br></pre></td></tr></table></figure></div>
-
-<p>8.更新二连</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>
-
-<p>至此，nginx就完整的从你的系统中消失了，需要注意的是，6.请谨慎操作，否则可能导致无法正常运行！！！</p>
+<p>下雨的天,有点冷,一个人窝在被窝里,看速度与激情里。不知从什么时候开始喜欢保罗，沉迷于他的车技跟独特的魅力,幻想着我能与他一样,在急速的时间里变得无畏,对一刹那静止的沉醉。可我还差的很多,起码,得有一辆GTR吧。</p>
+<p>等以后有钱了,就不再工作,去做想做的事,开一辆最快的车,行驶在世界的任何角落。</p>
+<p>冲刺极限的速度,想想就让人兴奋,快,到达极致的快! 世俗追不上我,死神也追不上我,没有人能追的上我。</p>
+<p>听最喜欢的歌,开最快的车,在世间自由的活着。命运,势力,平凡,一切都无法束缚,在人间,做一个最自由的精灵。</p>
+<p>然而,那一天，我不知道还要等多久…</p>
+<p>总是感觉身后有个人,大概是我的影子,从小到大,一直在我身边。假如我不是人格分裂的话,常常能听到不一样的声音。比如,有时候我会忘记我想要什么,忙碌的生活着是为了什么,若是这样想,所有的人都会崩溃吧,努力的活着,到最后却还是会死,没有人记得你的一切,都会从这个世界上消失,更可悲的是,喜欢的,在乎的,先于你离开,尽管补偿的可能是更多的钱,更大的房子,更舒服的生活,可是,谁会在乎这些啊。</p>
+<p>每当我这样想,就会有不一样的声音想起,以后的几十年,会有点点滴滴的快乐,像是繁星,一颗一颗繁星,组成浩瀚的苍穹,多么普通,多么伟大。</p>
+<p>如果能这样想的话,即使明天是末日,也没有什么了… 不过新的一天比末日更让人期待吧,我本一无所有,却终将拥抱满天自由。</p>
 
       
     </div>
@@ -146,11 +124,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2020/03/09/" id="article-nav-newer" class="article-nav-link-wrap">
+      <a href="/2020/03/09/ubuntu%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption"></strong>
         <div class="article-nav-title">
           
-            ubuntu更换阿里源
+            ubuntu完全卸载软件的方法
           
         </div>
       </a>
@@ -158,31 +136,32 @@
   </div>
   <div class="article-nav-block">
     
-      <a href="/2020/03/08/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">影子</div>
+      <a href="/2020/03/06/%E5%86%99%E4%BD%9C%E6%97%A5%E5%B8%B8/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">写作日常</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
   </div>
 </nav>
 
-    <link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css ">
+    <link rel="stylesheet" href="/css/gitment.css"> 
 <script src="/js/gitment.js"></script>
-<% if (!index && post.comments){ %>
+
 <div id="gitmentContainer"></div>
+
 <script>
 var gitment = new Gitment({
-  id: '<%=page.date %>',
-  owner: '<%= theme.gitment.owner %>',
-  repo: '<%= theme.gitment.repo %>',
+  id: 'Sun Mar 08 2020 02:16:09 GMT+0800',
+  owner: 'otheruniverse',
+  repo: 'otheruniverse.github.io',
   oauth: {
-    client_id: '<%= theme.gitment.client_id %>',
-    client_secret: '<%= theme.gitment.client_secret %>',
+    client_id: 'c8f459949b1564d0743f',
+    client_secret: 'ad42a455fc694c53d807c0bac5ff490b3c3df48b',
   },
 })
 gitment.render('gitmentContainer')
 </script>
-<% } %>
+
 
   
   
@@ -244,23 +223,23 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
-            <a href="/2025/10/01/">十月随笔</a>
+            <a href="/2025/10/01/%E5%8D%81%E6%9C%88%E9%9A%8F%E7%AC%94/">十月随笔</a>
           </li>
         
           <li>
-            <a href="/2020/03/22/">无期</a>
+            <a href="/2020/03/22/%E6%97%A0%E6%9C%9F/">无期</a>
           </li>
         
           <li>
-            <a href="/2020/03/14/">烟雾报警传感器实验</a>
+            <a href="/2020/03/14/%E7%83%9F%E9%9B%BE%E6%8A%A5%E8%AD%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C/">烟雾报警传感器实验</a>
           </li>
         
           <li>
-            <a href="/2020/03/09/">ubuntu更换阿里源</a>
+            <a href="/2020/03/09/ubuntu%E6%9B%B4%E6%8D%A2%E9%98%BF%E9%87%8C%E6%BA%90/">ubuntu更换阿里源</a>
           </li>
         
           <li>
-            <a href="/2020/03/09/">ubuntu完全卸载软件的方法</a>
+            <a href="/2020/03/09/ubuntu%E5%AE%8C%E5%85%A8%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95/">ubuntu完全卸载软件的方法</a>
           </li>
         
       </ul>
@@ -298,8 +277,8 @@ gitment.render('gitmentContainer')
       </div>
       <footer id="footer">
   <div class="foot-box global-width">
-    &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %> &nbsp;&nbsp;
-    <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &copy; 2020 凉快 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
     &nbsp;|&nbsp;主题 <a href="https://github.com/otheruniverse/otheruniverse.github.io.git">gu</a>
     <br>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
