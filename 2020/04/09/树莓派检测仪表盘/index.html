@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>树莓派检测仪表盘 | 朝闻道 夕死可矣</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="hexo ubuntu blog" />
+  
+  <meta name="description" content="前言：Pi仪表盘主要功能是将树莓派系统的实时信息显示到网页上，包括CPU基本信息，内存、缓存、分区数据，磁盘占用，实时负载，树莓派IP，运行时间等基础信息。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派检测仪表盘">
+<meta property="og:url" content="https://theboy.top/2020/04/09/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A3%80%E6%B5%8B%E4%BB%AA%E8%A1%A8%E7%9B%98/index.html">
+<meta property="og:site_name" content="朝闻道 夕死可矣">
+<meta property="og:description" content="前言：Pi仪表盘主要功能是将树莓派系统的实时信息显示到网页上，包括CPU基本信息，内存、缓存、分区数据，磁盘占用，实时负载，树莓派IP，运行时间等基础信息。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/09/G5fyL9.png">
+<meta property="article:published_time" content="2020-04-09T10:24:48.000Z">
+<meta property="article:modified_time" content="2020-04-09T10:24:48.000Z">
+<meta property="article:author" content="凉快">
+<meta property="article:tag" content="树莓派">
+<meta property="article:tag" content="Web">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/04/09/G5fyL9.png">
+  
+    <link rel="alternate" href="/atom.xml" title="朝闻道 夕死可矣" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/ladybug.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" style="background-image: url(/images/bck.png)" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/derm/about.html" title
+        
+        >以梦为马</a>
+      
+        <a class="nav-item" href="/yan/new.html" title
+        
+        >留言墙</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-树莓派检测仪表盘" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      树莓派检测仪表盘
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/04/09/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A3%80%E6%B5%8B%E4%BB%AA%E8%A1%A8%E7%9B%98/" class="article-date">
+  <time datetime="2020-04-09T10:24:48.000Z" itemprop="datePublished">2020-04-09</time>
+</a>
+    
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" rel="tag">树莓派</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>前言：Pi仪表盘主要功能是将树莓派系统的实时信息显示到网页上，包括CPU基本信息，内存、缓存、分区数据，磁盘占用，实时负载，树莓派IP，运行时间等基础信息。</p>
+<a id="more"></a>
+<p><img src="https://s1.ax1x.com/2020/04/09/G5fyL9.png" alt="Pi Dashboard"><br>因为使用的是linux系统，本地环境有很大差别，所以可能出现各种问题，请不要心急，一步一步来，出错的话可以谷歌，问度娘，或者联系我，QQ: 2394274017。本人也是菜鸟，出错之处望多多指教！</p>
+<h2 id="一、安装Nginx"><a href="#一、安装Nginx" class="headerlink" title="一、安装Nginx"></a>一、安装Nginx</h2><h3 id="先更新二连："><a href="#先更新二连：" class="headerlink" title="先更新二连："></a>先更新二连：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt update &amp;&amp; sudo apt upgrade</span><br></pre></td></tr></table></figure></div>
+<h3 id="安装-nginx："><a href="#安装-nginx：" class="headerlink" title="安装 nginx："></a>安装 nginx：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install nginx</span><br></pre></td></tr></table></figure></div>
+<h3 id="启动-nginx："><a href="#启动-nginx：" class="headerlink" title="启动 nginx："></a>启动 nginx：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service nginx start</span><br></pre></td></tr></table></figure></div>
+<p>安装成功后，打开浏览器，输入 http://树莓派IP/ ，应该就能看到 nginx 欢迎界面。另外，用其他电脑的浏览器打开时注意树莓派和其他电脑要在同一网络下，即同一路由器。</p>
+<h3 id="可能出现的错误："><a href="#可能出现的错误：" class="headerlink" title="可能出现的错误："></a>可能出现的错误：</h3><p>树莓派安装了Apache，Tomcat等软件使端口被占用。输入 http://树莓派IP/ 后显示错误。若在命令行输入nginx -v 出现nginx 版本信息就代表安装成功。</p>
+<h2 id="二、安装php7"><a href="#二、安装php7" class="headerlink" title="二、安装php7"></a>二、安装php7</h2><h3 id="查看软件源里面有没有php7："><a href="#查看软件源里面有没有php7：" class="headerlink" title="查看软件源里面有没有php7："></a>查看软件源里面有没有php7：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt search php7.0</span><br></pre></td></tr></table></figure></div>
+<p>在列表中有php7.0-fpm php7.0-cli 的等表示可以安装。（没有的话建议更换软件源）</p>
+<h3 id="安装php："><a href="#安装php：" class="headerlink" title="安装php："></a>安装php：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install php7.0-fpm php7.0-cli php7.0-curl php7.0-gd php7.0-mcrypt php7.0-cgi</span><br></pre></td></tr></table></figure></div>
+<h3 id="启动php7："><a href="#启动php7：" class="headerlink" title="启动php7："></a>启动php7：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service php7.0-fpm start</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="三、修改nginx配置文件，让nginx可以处理php"><a href="#三、修改nginx配置文件，让nginx可以处理php" class="headerlink" title="三、修改nginx配置文件，让nginx可以处理php"></a>三、修改nginx配置文件，让nginx可以处理php</h2><h3 id="使用vim-或任意编辑器）打开配置文件："><a href="#使用vim-或任意编辑器）打开配置文件：" class="headerlink" title="使用vim(或任意编辑器）打开配置文件："></a>使用vim(或任意编辑器）打开配置文件：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim /etc/nginx/sites-available/default</span><br></pre></td></tr></table></figure></div>
+<p>找到以下内容：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">	            <span class="comment"># First attempt to serve request as file, then</span></span><br><span class="line">	            <span class="comment"># as directory, then fall back to displaying a 404.</span></span><br><span class="line">	            try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ =404;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>替换为</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">        index  index.html index.htm index.php default.html default.htm default.php;</span><br><span class="line">&#125;</span><br><span class="line">	 </span><br><span class="line">location ~\.php$ &#123;</span><br><span class="line">	    fastcgi_pass unix:/run/php/php7.0-fpm.sock;</span><br><span class="line">	    <span class="comment">#fastcgi_pass 127.0.0.1:9000;</span></span><br><span class="line">            fastcgi_param SCRIPT_FILENAME <span class="variable">$document_root</span><span class="variable">$fastcgi_script_name</span>;</span><br><span class="line">	    include fastcgi_params;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>保存并退出；</p>
+<h3 id="重启nginx"><a href="#重启nginx" class="headerlink" title="重启nginx:"></a>重启nginx:</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service nginx restart</span><br></pre></td></tr></table></figure></div>
+<h2 id="四、下载Pi仪表板的php代码并放到树莓派-var-www-html-目录下"><a href="#四、下载Pi仪表板的php代码并放到树莓派-var-www-html-目录下" class="headerlink" title="四、下载Pi仪表板的php代码并放到树莓派 /var/www/html/ 目录下"></a>四、下载Pi仪表板的php代码并放到树莓派 /var/www/html/ 目录下</h2><p><a href="https://gitee.com/gitome/pi.git" target="_blank" rel="noopener">gitee下载地址</a><br><a href="https://github.com/otheruniverse/pi.git" target="_blank" rel="noopener">github 下载地址</a><br>将解压缩后的文件夹重命名为 pi ,并放到树莓派系统 /var/html/www/ 目录下。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mv pi/ /var/www/html</span><br></pre></td></tr></table></figure></div>
+<p>然后在浏览器地址栏输入 http://树莓派IP/pi/index.php 就可以查看最终效果了。</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2025/03/22/%E6%97%A0%E6%9C%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            无期
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/03/14/%E7%83%9F%E9%9B%BE%E6%8A%A5%E8%AD%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">烟雾报警传感器实验</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  id: 'Thu Apr 09 2020 18:24:48 GMT+0800',
+  owner: 'otheruniverse',
+  repo: 'otheruniverse.github.io',
+  oauth: {
+    client_id: 'c8f459949b1564d0743f',
+    client_secret: 'ad42a455fc694c53d807c0bac5ff490b3c3df48b',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/dd.jpg" title="头像来自网络"></img>
+    <h3 class="avatar-name">
+      
+        青山日暮
+      
+    </h3>
+    <p class="avatar-slogan">
+      天街小雨润如酥，草色遥看近却无，最是一年春好处，绝胜烟柳满皇都
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/ubuntu/" style="font-size: 15px;">ubuntu</a> <a href="/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/" style="font-size: 10px;">传感器</a> <a href="/tags/%E5%BF%83%E6%83%85/" style="font-size: 10px;">心情</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 20px;">技巧</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 10px;">树莓派</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 15px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/10/">十月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">三月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/10/01/%E5%8D%81%E6%9C%88%E9%9A%8F%E7%AC%94/">十月随笔</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/22/%E6%97%A0%E6%9C%9F/">无期</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/09/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%A3%80%E6%B5%8B%E4%BB%AA%E8%A1%A8%E7%9B%98/">树莓派检测仪表盘</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/14/%E7%83%9F%E9%9B%BE%E6%8A%A5%E8%AD%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%AE%9E%E9%AA%8C/">烟雾报警传感器实验</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/09/ubuntu%E6%9B%B4%E6%8D%A2%E9%98%BF%E9%87%8C%E6%BA%90/">ubuntu更换阿里源</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://devanswers.co/" title target='_blank'
+        >大神</a>
+      
+        <a style="display: block;" href="https://yelog.org/" title target='_blank'
+        >叶落阁</a>
+      
+        <a style="display: block;" href="https://www.hexothe.me/" title target='_blank'
+        >十大主题</a>
+      
+        <a style="display: block;" href="https://pixabay.com/images/search/wallpaper/" title target='_blank'
+        >壁纸</a>
+      
+        <a style="display: block;" href="http://jandan.net/ooxx" title target='_blank'
+        >煎蛋</a>
+      
+        <a style="display: block;" href="https://haremu.com/about/" title target='_blank'
+        >后宫学长</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2020 凉快 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/otheruniverse/otheruniverse.github.io.git">gu</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/derm/about.html" class="mobile-nav-link">以梦为马</a>
+  
+    <a href="/yan/new.html" class="mobile-nav-link">留言墙</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
