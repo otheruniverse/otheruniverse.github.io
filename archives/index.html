@@ -55,7 +55,7 @@ ga('send', 'pageview');
 <body>
   <div id="fullpage" class="mobile-nav-right">
     
-      <div id="wrapper" style="background-image: url(https://s1.ax1x.com/2020/04/11/G7yoCT.png)" title="背景图片来自网络">
+      <div id="wrapper" style="background-image: url(/images/bck.png)" title="背景图片来自网络">
     
     
       <header id="header">
@@ -319,7 +319,7 @@ ga('send', 'pageview');
       
     </h3>
     <p class="avatar-slogan">
-      天街小雨润如酥，草色遥看近却无，最是一年春好处，绝胜烟柳满皇都
+      天街小雨润如酥  草色遥看近却无  最是易年春好处  绝胜烟柳满皇都
     </p>
   </div>
 </div>
@@ -425,20 +425,13 @@ script.src = "/js/jquery-2.0.3.min.js";
 document.body.write(script);
 }
 </script>
+<% if (theme.fancybox){ %>
+  <%- css('fancybox/jquery.fancybox') %>
+  <%- js('fancybox/jquery.fancybox.pack') %>
+<% } %>
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
+<%- js('js/script') %>
+<%- partial('gauges-analytics') %>
 
     </div>
     <nav id="mobile-nav" class="mobile-nav-box">

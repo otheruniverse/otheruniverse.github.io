@@ -118,10 +118,10 @@ button::-moz-focus-inner {
 
 body{
   line-height: 1.5;
-  color: #333;
+  color: #111;
   background: #FAF3E1;
-  font-size: 14px;
-  font-family: Arial, Roboto, "Droid Sans", "Hiragino Sans GB", "Microsoft YaHei", "Simsun", STXihei, "sans-serif";
+  font-size: 16px;
+  font-family: Georgia, serif;
 }
 
 iframe {
@@ -130,7 +130,7 @@ iframe {
 
 a {
   text-decoration: none;
-  color: #333;
+  color: #111;
 }
 
 a:focus,
@@ -318,7 +318,7 @@ html, body, #fullpage{
   bottom: 0;
 }
 .widget-title {
-  font-size: 16px;
+  font-size: 18px;
   color: #be7e4a;
   /* color: rgb(21, 139, 184) */
 }
@@ -570,7 +570,7 @@ html, body, #fullpage{
   text-align: center;
 }
 .article-content blockquote footer {
-  font-size: 14px;
+  font-size: 16px;
   margin: 1.6em 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -650,7 +650,7 @@ html, body, #fullpage{
   margin-bottom: 50px;
 }
 .archive-article-title {
-  font-size: 16px;
+  font-size: 18px;
 }
 .archive-year-wrap {
   margin-bottom: 50px;
